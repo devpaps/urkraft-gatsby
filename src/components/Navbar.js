@@ -44,13 +44,19 @@ const Navbar = () => {
           </a>
           <ul>
             <li>
-              <Link to="/omoss">Om oss</Link>
+              <Link to="/omoss">
+                <span>Om oss</span>
+              </Link>
             </li>
             <li>
-              <Link to="/kontakt">Kontakt</Link>
+              <Link to="/kontakt">
+                <span>Kontakt</span>
+              </Link>
             </li>
             <li>
-              <Link to="/senastenytt">Senaste Nytt</Link>
+              <Link to="/senastenytt">
+                <span>Senaste Nytt</span>
+              </Link>
             </li>
           </ul>
           <span aria-hidden="true" className="stretchy-nav-bg"></span>
