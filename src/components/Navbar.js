@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import "../assets/css/style.css"
 
@@ -22,6 +22,12 @@ const headerText = {
 }
 
 const Navbar = () => {
+  const [openMenu, setOpenMenu] = useState(false)
+
+  const open = () => {
+    setOpenMenu(!openMenu)
+  }
+
   return (
     <header style={{ background: "#F80F00", width: "100%" }}>
       <div style={header}>
@@ -29,7 +35,13 @@ const Navbar = () => {
           Urkraft <span style={{ fontWeight: "300" }}>Gym</span> |{" "}
           <span>Svettas eller gå hem!</span>
         </h1>
-        <nav>
+        <nav
+          onClick={open}
+          className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}
+        >
+          <a className="cd-nav-trigger" href="#0">
+            <span aria-hidden="true"></span>
+          </a>
           <ul>
             <li>
               <Link to="/omoss">Om oss</Link>
@@ -41,6 +53,7 @@ const Navbar = () => {
               <Link to="/senastenytt">Senaste Nytt</Link>
             </li>
           </ul>
+          <span aria-hidden="true" className="stretchy-nav-bg"></span>
         </nav>
       </div>
     </header>
