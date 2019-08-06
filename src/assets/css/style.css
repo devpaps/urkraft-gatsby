@@ -6,7 +6,15 @@ header ul {
   display: flex;
 }
 
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(2) span {
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
 
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(3) span {
+  -webkit-animation-delay: .1s;
+  animation-delay: .2s;
+}
 
 header ul li {
   list-style: none;
