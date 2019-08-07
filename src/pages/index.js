@@ -4,10 +4,10 @@ import "../assets/css/reboot.css"
 import Img from "gatsby-image"
 import { Link, graphql } from "gatsby"
 
-import MainStyle from "../components/mainstyle.module.css"
+import MainStyle from "../components/modules/mainstyle.module.css"
 
 const index = props => (
-  <main>
+  <>
     <Layout>
       <section className={MainStyle.mainHero}>
         <div className={MainStyle.heroContainer}>
@@ -28,7 +28,7 @@ const index = props => (
         </div>
       </section>
     </Layout>
-  </main>
+  </>
 )
 
 export default index
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
     imageOne: file(relativePath: { eq: "header-image.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

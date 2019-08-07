@@ -16,24 +16,35 @@
 .heroText {
   position: absolute;
   top: 20%;
-  left: 145px;
+  left: 10%;
   color: #fff;
   text-transform: uppercase;
   font-family: Rubik;
   font-weight: 700;
   font-size: calc(6em + 1vw);
-  margin-bottom: 0
+  margin-bottom: 0;
+  text-shadow: 2px 2px 10px rgb(32, 32, 32);
 }
 
 .heroText p {
   display: inline-block;
   position: absolute;
   right: -10%;
-  bottom: -100px;
+  bottom: -120px;
 }
 
 .heroSubText {
   font-size: 1em;
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgb(32, 32, 32);
+  width: 50%;
+}
+
+.heroSubText p {
+  width: 70%;
 }
 
 @media (max-width: 768px) {
@@ -52,13 +63,36 @@
   .heroText p {
     position: relative;
     display: inline-block;
-    top: 0;
+    top: -25px;
     left: 0;
+  }
+
+  .heroSubText {
+    left: 50%;
+    top: 65%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+
+  .heroSubText {
+    width: 100%;
+  }
+
+  .heroSubText p {
+    width: 100%
   }
 }
 
 @media (max-width: 600px) {
   .heroText {
-    font-size: 2em;
+    font-size: 3em;
+    top: 30%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+
+  }
+
+  .heroText p {
+    top: 0
   }
 }

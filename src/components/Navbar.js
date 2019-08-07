@@ -2,14 +2,17 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import "../assets/css/style.css"
 
-import NavStyle from "../components/navbar.module.css"
+/* import { IoMdMegaphone } from "react-icons/io" */
+
+import NavStyle from "../components/modules/navbar.module.css"
 
 const header = {
   display: "flex",
   alignItems: "center",
   height: "100px",
-  margin: "0 auto",
   width: "90%",
+  maxWidth: "1600px",
+  margin: "0 auto",
 }
 
 const Navbar = () => {
@@ -20,7 +23,7 @@ const Navbar = () => {
   }
 
   return (
-    <header style={{ background: "#F80F00", width: "100%" }}>
+    <header style={{ background: "#F80F00" }}>
       <div style={header}>
         <Link to="/" className={NavStyle.headerText}>
           <h1 className={NavStyle.headerNavText}>

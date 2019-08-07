@@ -33,13 +33,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "gatsby-starter-default",
+        name: "Urkraft Gym",
         short_name: "Urkraft Gym",
         start_url: "/",
-        background_color: "#663399",
+        background_color: "#E93F33",
         theme_color: "#E93F33",
         display: "minimal-ui",
-        icon: "src/assets/images/header-image.jpg", // This path is relative to the root of the site.
+        icon: "src/assets/images/logo.png", // This path is relative to the root of the site.
       },
     },
     "gatsby-plugin-offline",
