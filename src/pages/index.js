@@ -16,7 +16,13 @@ const index = props => (
             fluid={props.data.imageOne.childImageSharp.fluid}
           />
           <div className={MainStyle.heroText}>
-            Urkraft <span>Gym</span>
+            Urkraft <p>Gym</p>
+          </div>
+          <div className={MainStyle.heroSubText}>
+            <p>
+              TDIK är medlem i Svenska volleybollförbundet Svenska
+              styrkelyftsförbundet och Svenska bordtennisförbundet.
+            </p>
           </div>
         </div>
       </section>

@@ -1,11 +1,16 @@
 .mainHero {
-  height: 90vh;
+  /*  height: 90vh;
   background: red;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .heroContainer {
   position: relative;
+}
+
+.heroImage {
+  position: relative;
+  height: 90vh;
 }
 
 .heroText {
@@ -20,11 +25,15 @@
   margin-bottom: 0
 }
 
-.heroText span {
-  display: block;
+.heroText p {
+  display: inline-block;
   position: absolute;
   right: -10%;
   bottom: -100px;
+}
+
+.heroSubText {
+  font-size: 1em;
 }
 
 @media (max-width: 768px) {
@@ -40,10 +49,16 @@
     transform: translate(-50%, -50%)
   }
 
-  .heroText span {
+  .heroText p {
     position: relative;
     display: inline-block;
     top: 0;
     left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroText {
+    font-size: 2em;
   }
 }

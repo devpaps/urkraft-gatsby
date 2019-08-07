@@ -26,6 +26,7 @@
     display: block;
     font-size: 0.5em;
     font-weight: 300;
+    margin-top: 5px;
   }
 }
 
@@ -44,15 +45,15 @@
   .headerNavText::before {
     content: '';
     display: block;
-    width: 120px;
+    width: 115px;
     height: 1px;
     background: #fff;
     position: relative;
-    top: 24px;
+    top: 27px;
     margin: 0 auto;
   }
 
-  .headerNavText span {
+  .headerNavText span:nth-child(2) {
     display: none;
   }
 }
