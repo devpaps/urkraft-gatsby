@@ -17,6 +17,7 @@ const index = props => (
           />
           <div className={MainStyle.heroText}>
             Urkraft <p>Gym</p>
+            {/*  p ska vara en span */}
           </div>
           <div className={MainStyle.heroSubText}>
             <p>
