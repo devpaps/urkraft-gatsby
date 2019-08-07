@@ -1,3 +1,9 @@
+.contain {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0px auto;
+}
+
 header ul {
   padding: 0;
   margin: 0;
@@ -96,7 +102,6 @@ header ul li a {
     right: 60px;
     -webkit-transform: translateX(3px) translateY(-50%) scaleY(0);
     transform: translateX(3px) translateY(-50%) scaleY(0);
-    background-color: #0a9581;
   }
 
   .cd-stretchy-nav ul a::after {
@@ -210,6 +215,7 @@ header ul li a {
     overflow: hidden;
     white-space: nowrap;
     color: transparent;
+    border: 1px solid #000;
   }
 
   .cd-nav-trigger span {

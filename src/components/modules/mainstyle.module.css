@@ -1,9 +1,3 @@
-.mainHero {
-  /*  height: 90vh;
-  background: red;
-  overflow: hidden; */
-}
-
 .heroContainer {
   position: relative;
 }
@@ -109,4 +103,32 @@
 
 
 
-.whatWeDo {}
+.whatWeDo {
+  margin: 10em auto;
+  padding: 0 2em;
+  position: relative;
+}
+
+.whatWeDo .triangle {
+  width: 0;
+  height: 0;
+  border-top: 400px solid #f80f00;
+  border-right: 600px solid transparent;
+}
+
+.whatWeDoBox {
+  position: absolute;
+  top: 50px;
+  color: #fff;
+  font-size: 2em;
+}
+
+@media (max-width: 600px) {
+  .whatWeDo .triangle {
+    width: 100%;
+    height: 400px;
+    background: #f80f00;
+    border-top: none;
+    border-right: none;
+  }
+}

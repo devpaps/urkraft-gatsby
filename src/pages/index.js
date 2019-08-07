@@ -15,20 +15,22 @@ const index = props => (
             className={MainStyle.heroImage}
             fluid={props.data.imageOne.childImageSharp.fluid}
           />
-          <div className={MainStyle.heroText}>
-            Urkraft <p>Gym</p>
-            {/*  p ska vara en span */}
-          </div>
-          <div className={MainStyle.heroSubText}>
-            <p>
-              TDIK är medlem i Svenska volleybollförbundet Svenska
-              styrkelyftsförbundet och Svenska bordtennisförbundet.
-            </p>
+          <div className="contain">
+            <div className={MainStyle.heroText}>
+              Urkraft <p>Gym</p>
+            </div>
+            <div className={MainStyle.heroSubText}>
+              <p>
+                TDIK är medlem i Svenska volleybollförbundet Svenska
+                styrkelyftsförbundet och Svenska bordtennisförbundet.
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <section className={MainStyle.whatWeDo}>
-        <div>
+        <div className={MainStyle.triangle}></div>
+        <div className={MainStyle.whatWeDoBox}>
           <h1>Vad håller vi på med?</h1>
         </div>
       </section>
