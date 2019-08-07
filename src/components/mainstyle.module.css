@@ -1,0 +1,49 @@
+.mainHero {
+  height: 90vh;
+  background: red;
+  overflow: hidden;
+}
+
+.heroContainer {
+  position: relative;
+}
+
+.heroText {
+  position: absolute;
+  top: 20%;
+  left: 145px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Rubik;
+  font-weight: 700;
+  font-size: calc(6em + 1vw);
+  margin-bottom: 0
+}
+
+.heroText span {
+  display: block;
+  position: absolute;
+  right: -10%;
+  bottom: -100px;
+}
+
+@media (max-width: 768px) {
+  .mainHero {
+    text-align: center;
+  }
+
+  .heroText {
+    font-size: 4em;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+  }
+
+  .heroText span {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+  }
+}
