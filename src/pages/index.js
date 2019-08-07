@@ -27,6 +27,11 @@ const index = props => (
           </div>
         </div>
       </section>
+      <section className={MainStyle.whatWeDo}>
+        <div>
+          <h1>Vad håller vi på med?</h1>
+        </div>
+      </section>
     </Layout>
   </>
 )

@@ -47,6 +47,7 @@
   width: 70%;
 }
 
+
 @media (max-width: 768px) {
   .mainHero {
     text-align: center;
@@ -69,7 +70,7 @@
 
   .heroSubText {
     left: 50%;
-    top: 65%;
+    top: 60%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
   }
@@ -88,11 +89,24 @@
     font-size: 3em;
     top: 30%;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 4px rgb(32, 32, 32);
   }
 
   .heroText p {
-    top: 0
+    top: -20px;
   }
 }
+
+
+
+
+
+
+
+/* WHAT WE DO */
+
+
+
+
+.whatWeDo {}
