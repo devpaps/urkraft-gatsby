@@ -47,7 +47,7 @@ header ul li a {
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    background: #9acd91;
+    background: #f80f00;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     -webkit-transition: height 0.2s, -webkit-box-shadow 0.2s;
@@ -72,7 +72,7 @@ header ul li a {
     transition: visibility 0.3s;
   }
 
-  .cd-stretchy-nav ul a {
+  header ul li a {
     position: relative;
     display: block;
     height: 50px;
@@ -82,7 +82,7 @@ header ul li a {
 
     font-size: 1.4rem;
     -webkit-transition: color .2s;
-    text-transform: uppercase;
+    text-transform: capitalize;
     transition: color .2s;
   }
 
@@ -226,7 +226,8 @@ header ul li a {
     transition: background-color .2s;
   }
 
-  .cd-nav-trigger span::before {
+  .cd-nav-trigger span::before,
+  .cd-nav-trigger span::after {
     content: '';
     top: 0;
     left: 0;
@@ -242,7 +243,21 @@ header ul li a {
     transform: translateY(-6px);
   }
 
+  .cd-nav-trigger span::before {
+
+    -webkit-transform: translateY(-6px);
+
+    transform: translateY(-6px);
+  }
+
   .cd-nav-trigger span::after {
+
+    -webkit-transform: translateY(6px);
+
+    transform: translateY(6px);
+  }
+
+  .cd-nav-trigger .nav-is-visible span::before {
     content: '';
     top: 0;
     left: 0;
@@ -250,12 +265,12 @@ header ul li a {
     transition: -webkit-transform .2s;
     transition: transform .2s;
     transition: transform .2s, -webkit-transform .2s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     position: absolute;
     width: 16px;
     height: 2px;
     background-color: #fff;
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
   }
 
   .cd-stretchy-nav.edit-content ul span {
@@ -293,5 +308,19 @@ header ul li a {
   .no-touch .cd-stretchy-nav.edit-content.nav-is-visible ul a:hover span {
     opacity: 1;
     visibility: visible;
+  }
+
+  .nav-is-visible .cd-nav-trigger span {
+    background-color: transparent;
+  }
+
+  .nav-is-visible .cd-nav-trigger span::before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+  }
+
+  .nav-is-visible .cd-nav-trigger span::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
   }
 }
