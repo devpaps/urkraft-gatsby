@@ -64,7 +64,7 @@
 
   .heroSubText {
     left: 50%;
-    top: 60%;
+    top: 55%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
   }
@@ -104,8 +104,6 @@
 
 
 .whatWeDo {
-  margin: 10em auto;
-  padding: 0 2em;
   position: relative;
 }
 

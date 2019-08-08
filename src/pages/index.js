@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import { Link, graphql } from "gatsby"
 
 import MainStyle from "../components/modules/mainstyle.module.css"
+import "../assets/css/global.css"
 
 const index = props => (
   <>
@@ -28,7 +29,7 @@ const index = props => (
           </div>
         </div>
       </section>
-      <section className={MainStyle.whatWeDo}>
+      <section className={`container ${MainStyle.whatWeDo}`}>
         <div className={MainStyle.triangle}></div>
         <div className={MainStyle.whatWeDoBox}>
           <h1>Vad håller vi på med?</h1>
