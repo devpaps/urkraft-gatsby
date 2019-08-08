@@ -29,10 +29,29 @@ const index = props => (
           </div>
         </div>
       </section>
-      <section className={`container ${MainStyle.whatWeDo}`}>
-        <div className={MainStyle.triangle}></div>
-        <div className={MainStyle.whatWeDoBox}>
-          <h1>Vad håller vi på med?</h1>
+      <section className={MainStyle.whatWeDo}>
+        {/* <div className={MainStyle.triangle}></div> */}
+        <div className={`container ${MainStyle.test}`}>
+          <div className={MainStyle.whatWeDoBox}>
+            <h1>Vad håller vi på med?</h1>
+            <p>
+              Inriktningen är styrketräning, volleyboll/beachvolleyboll och
+              bordtennis. Gymmet, Urkraft gym, finns i källaren i Kyrktåsjö
+              skola.
+            </p>
+          </div>
+          <div className={MainStyle.whatWeDoImageText}>
+            <h1>Flerfaldiga medaljörer</h1>
+            <p>
+              TDIK är medlem i Svenska volleybollförbundet Svenska
+              styrkelyftsförbundet och Svenska bordtennisförbundet. Volleyboll
+              och bordtennis spelas i skolans gympasal och beachvolleyboll
+              spelas på Invallningen i Tåsjö östra.
+            </p>
+          </div>
+        </div>
+        <div className={MainStyle.whatWeDoImage}>
+          <Img fluid={props.data.imageTwo.childImageSharp.fluid} />
         </div>
       </section>
     </Layout>
@@ -41,14 +60,23 @@ const index = props => (
 
 export default index
 
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
 export const pageQuery = graphql`
   query {
     imageOne: file(relativePath: { eq: "header-image.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
+      ...fluidImage
+    }
+    imageTwo: file(relativePath: { eq: "whatWeDo.jpg" }) {
+      ...fluidImage
     }
   }
 `
