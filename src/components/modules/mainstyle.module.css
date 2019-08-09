@@ -41,7 +41,6 @@
   width: 70%;
 }
 
-
 @media (max-width: 768px) {
   .mainHero {
     text-align: center;
@@ -52,7 +51,7 @@
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
   }
 
   .heroText p {
@@ -66,7 +65,7 @@
     left: 50%;
     top: 55%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
+    transform: translateX(-50%);
   }
 
   .heroSubText {
@@ -74,7 +73,7 @@
   }
 
   .heroSubText p {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -92,17 +91,32 @@
   }
 }
 
-
-
-
-
-
-
 /* WHAT WE DO */
 
+.whatWeDoButton {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #fff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.whatWeDoButton:hover {
+  color: #000;
+  background: #fff;
+  text-decoration: none;
+}
 
 .whatWeDo {
   position: relative;
+  font-family: Rubik;
 }
 
 .test {
@@ -117,7 +131,6 @@
   color: #fff;
 }
 
-
 .whatWeDoBox {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 60%;
@@ -129,8 +142,7 @@
   padding-bottom: 200px;
   -webkit-transform: translateY(-60px);
   transform: translateY(-60px);
-  transition: transform .4s linear 1.2s,
-    -webkit-transform .4s linear 1.2s;
+  transition: transform 0.4s linear 1.2s, -webkit-transform 0.4s linear 1.2s;
 }
 
 .whatWeDoBox::before {
@@ -198,10 +210,12 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    width: 100% !important;
+    padding: 0 !important;
   }
 
   .whatWeDoBox {
-    padding: 100px;
+    padding: 100px 2em;
     z-index: 0;
   }
 
@@ -221,29 +235,13 @@
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
-    padding: 200px 0;
+    padding: 200px 2em;
     background: url(../../assets/images/whatWeDo.jpg) no-repeat center;
     margin-top: -61px;
   }
-
-  .whatWeDoImageText h1 {
-    padding: 0 1em;
-  }
-
-  .whatWeDoImageText p {
-    padding: 0 1em;
-
-  }
-
 }
 
-
-@media (max-width:645px) {
-  .test {
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
+@media (max-width: 645px) {
   .whatWeDoImageText h1 {
     font-size: 1.5em;
   }

@@ -35,9 +35,9 @@ const Navbar = () => {
           onClick={open}
           className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}
         >
-          <a className="cd-nav-trigger" href="#0">
+          <span className="cd-nav-trigger" href="#">
             <span aria-hidden="true"></span>
-          </a>
+          </span>
           <ul>
             <li>
               <Link to="/omoss">

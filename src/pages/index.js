@@ -30,7 +30,6 @@ const index = props => (
         </div>
       </section>
       <section className={MainStyle.whatWeDo}>
-        {/* <div className={MainStyle.triangle}></div> */}
         <div className={`container ${MainStyle.test}`}>
           <div className={MainStyle.whatWeDoBox}>
             <h1>Vad håller vi på med?</h1>
@@ -39,6 +38,7 @@ const index = props => (
               bordtennis. Gymmet, Urkraft gym, finns i källaren i Kyrktåsjö
               skola.
             </p>
+            {/* <Img fixed={props.data.vollyBoll.childImageSharp.fixed} /> */}
           </div>
           <div className={MainStyle.whatWeDoImageText}>
             <h1>Flerfaldiga medaljörer</h1>
@@ -48,6 +48,9 @@ const index = props => (
               och bordtennis spelas i skolans gympasal och beachvolleyboll
               spelas på Invallningen i Tåsjö östra.
             </p>
+            <Link to="omoss" className={MainStyle.whatWeDoButton}>
+              Läs mer
+            </Link>
           </div>
         </div>
         <div className={MainStyle.whatWeDoImage}>
@@ -70,6 +73,16 @@ export const fluidImage = graphql`
   }
 `
 
+export const fixedImage = graphql`
+  fragment fixedImage on File {
+    childImageSharp {
+      fixed(width: 200, height: 200) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const pageQuery = graphql`
   query {
     imageOne: file(relativePath: { eq: "header-image.jpg" }) {
@@ -77,6 +90,20 @@ export const pageQuery = graphql`
     }
     imageTwo: file(relativePath: { eq: "whatWeDo.jpg" }) {
       ...fluidImage
+    }
+  }
+`
+
+export const pageFixedQuery = graphql`
+  query {
+    vollyBoll: file(relativePath: { eq: "volleyboll.png" }) {
+      ...fixedImage
+    }
+    tablePingis: file(relativePath: { eq: "ping-pong.png" }) {
+      ...fixedImage
+    }
+    dumBell: file(relativePath: { eq: "dumbell.png" }) {
+      ...fixedImage
     }
   }
 `
