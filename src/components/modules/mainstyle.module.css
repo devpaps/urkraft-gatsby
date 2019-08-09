@@ -102,16 +102,19 @@
   text-decoration: none;
   font-family: "Rubik", sans-serif;
   font-weight: 300;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .whatWeDoButton:hover {
-  color: #000;
-  background: #fff;
+  color: #fff;
+  background: #f80f00;
+  border: 0.1em solid rgb(248, 15, 0);
   text-decoration: none;
+  -webkit-box-shadow: 5px 6px 20px rgba(248, 15, 0, 25%);
+  box-shadow: 5px 6px 20px rgba(248, 15, 0, 25%)
 }
 
 .whatWeDo {
@@ -178,6 +181,12 @@
 
 .whatWeDoBox p {
   white-space: pre-wrap;
+}
+
+.whatWeDoIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .whatWeDoImageText {

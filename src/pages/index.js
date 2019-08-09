@@ -6,6 +6,7 @@ import { Link, graphql } from "gatsby"
 
 import MainStyle from "../components/modules/mainstyle.module.css"
 import "../assets/css/global.css"
+import volleyball from "../assets/images/volleyball.png"
 
 const index = props => (
   <>
@@ -38,7 +39,28 @@ const index = props => (
               bordtennis. Gymmet, Urkraft gym, finns i källaren i Kyrktåsjö
               skola.
             </p>
-            {/* <Img fixed={props.data.vollyBoll.childImageSharp.fixed} /> */}
+            <div className={MainStyle.whatWeDoIcons}>
+              {/* <Img
+                fluid={props.data.imageThree.childImageSharp.fluid}
+                alt="hantel"
+                style={{ width: "50px" }}
+              />
+              <p>Gymmar</p>
+
+              <Img
+                fluid={props.data.imageFour.childImageSharp.fluid}
+                alt="pingis"
+                style={{ width: "50px" }}
+              />
+              <p>Spelar pingis</p>
+
+              <Img
+                fluid={props.data.imageFive.childImageSharp.fluid}
+                alt="handboll"
+                style={{ width: "50px" }}
+              />
+              <p>Skjuter handboll</p> */}
+            </div>
           </div>
           <div className={MainStyle.whatWeDoImageText}>
             <h1>Flerfaldiga medaljörer</h1>
@@ -48,7 +70,7 @@ const index = props => (
               och bordtennis spelas i skolans gympasal och beachvolleyboll
               spelas på Invallningen i Tåsjö östra.
             </p>
-            <Link to="omoss" className={MainStyle.whatWeDoButton}>
+            <Link to="/omoss" className={MainStyle.whatWeDoButton}>
               Läs mer
             </Link>
           </div>
@@ -73,7 +95,7 @@ export const fluidImage = graphql`
   }
 `
 
-export const fixedImage = graphql`
+/* export const fixedImage = graphql`
   fragment fixedImage on File {
     childImageSharp {
       fixed(width: 200, height: 200) {
@@ -81,7 +103,7 @@ export const fixedImage = graphql`
       }
     }
   }
-`
+` */
 
 export const pageQuery = graphql`
   query {
@@ -91,12 +113,21 @@ export const pageQuery = graphql`
     imageTwo: file(relativePath: { eq: "whatWeDo.jpg" }) {
       ...fluidImage
     }
+    imageThree: file(relativePath: { eq: "dumbbell.png" }) {
+      ...fluidImage
+    }
+    imageFour: file(relativePath: { eq: "ping-pong.png" }) {
+      ...fluidImage
+    }
+    imageFive: file(relativePath: { eq: "volleyball.png" }) {
+      ...fluidImage
+    }
   }
 `
 
-export const pageFixedQuery = graphql`
+/* export const pageFixedQuery = graphql`
   query {
-    vollyBoll: file(relativePath: { eq: "volleyboll.png" }) {
+    vollyBoll: file(relativePath: { eq: "images/volleyboll.png" }) {
       ...fixedImage
     }
     tablePingis: file(relativePath: { eq: "ping-pong.png" }) {
@@ -106,4 +137,4 @@ export const pageFixedQuery = graphql`
       ...fixedImage
     }
   }
-`
+` */
