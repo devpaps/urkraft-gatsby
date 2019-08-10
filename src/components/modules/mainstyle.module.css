@@ -13,7 +13,6 @@
   left: 10%;
   color: #fff;
   text-transform: uppercase;
-  font-family: Rubik;
   font-weight: 700;
   font-size: calc(6em + 1vw);
   margin-bottom: 0;
@@ -97,10 +96,9 @@
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #fff;
-  margin: 0 0.3em 0.3em 0;
+  margin: 1em 0.3em 0.3em 0;
   border-radius: 0.12em;
   text-decoration: none;
-  font-family: "Rubik", sans-serif;
   font-weight: 300;
   color: #fff;
   text-align: center;
@@ -114,12 +112,11 @@
   border: 0.1em solid rgb(248, 15, 0);
   text-decoration: none;
   -webkit-box-shadow: 5px 6px 20px rgba(248, 15, 0, 25%);
-  box-shadow: 5px 6px 20px rgba(248, 15, 0, 25%)
+  box-shadow: 5px 6px 20px rgba(248, 15, 0, 25%);
 }
 
 .whatWeDo {
   position: relative;
-  font-family: Rubik;
 }
 
 .test {
@@ -187,6 +184,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 5em;
+}
+
+.whatWeDoIconsBoxes:nth-child(n + 2) {
+  margin-left: 2em;
+  text-align: center;
+}
+
+.whatWeDoIconsBoxes div:nth-child(n + 2) {
+  margin-top: 1em;
 }
 
 .whatWeDoImageText {
@@ -260,63 +267,56 @@
   }
 }
 
-/* .whatWeDo {
-  position: relative;
-}
+/* INFOCONTAINER */
 
-.whatWeDo .triangle {
-  width: 0;
-  height: 0;
-  border-top: 545px solid rgba(248, 15, 0, 90%);
-  border-right: 50vw solid transparent;
-  position: absolute;
-  z-index: 1;
-  top: -45px;
-  left: -30px;
-}
-
-.whatWeDoBox {
-  position: absolute;
-  top: 50px;
+.InfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #151617;
   color: #fff;
-  font-size: 2em;
-  z-index: 1;
 }
 
-.whatWeDoBox p {
-  font-size: 0.5em;
-  width: 25vw;
-  word-break: break-word;
+.InfoContainerImageBox {
+  width: 50%;
 }
 
-.whatWeDoImage {
-  height: 500px;
-  overflow: hidden;
+
+.InfoContainerImageText {
+  width: 50%;
+  padding: 3em;
+  margin: 0 auto;
+  align-self: center;
+  padding: 0 3em
 }
 
-.whatWeDoImageText h1 {
+
+.InfoContainerImageText h1 {
   font-size: 3em;
   font-weight: 700;
 }
 
-.whatWeDoImageText {
-  width: 50%;
-  position: absolute;
-  top: 30%;
-  left: 43%;
-  color: #fff;
+.InfoContainerImageTextParagraph {
+  font-size: 1em;
+  line-height: 2;
 }
 
-
-
-@media (max-width: 1225px) {
-  .whatWeDo .triangle {
-    width: 100%;
-    height: 400px;
-    background: #f80f00;
-    border-top: none;
-    border-right: none;
-    top: 0;
-    left: 0;
+@media (max-width: 768px) {
+  .InfoContainer {
+    display: block;
+    margin: auto;
   }
-} */
+
+  .InfoContainerImageBox {
+    width: 100%;
+  }
+
+.InfoContainerImageText {
+  width: 100%;
+  padding: 2em 3em;
+}
+  
+  .InfoContainerImageText h1 {
+    font-size: 2em;
+  }
+}

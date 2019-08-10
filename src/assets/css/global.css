@@ -1,3 +1,8 @@
+html,
+body {
+  font-family: Rubik;
+}
+
 .container {
   width: 90%;
   max-width: 1600px;

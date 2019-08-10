@@ -4,9 +4,12 @@ import "../assets/css/reboot.css"
 import Img from "gatsby-image"
 import { Link, graphql } from "gatsby"
 
+import HantelSVG from "../assets/images/svg/dumbbell.svg"
+import PingisSVG from "../assets/images/svg/ping-pong.svg"
+import HandbollSVG from "../assets/images/svg/volleyball.svg"
+
 import MainStyle from "../components/modules/mainstyle.module.css"
 import "../assets/css/global.css"
-import volleyball from "../assets/images/volleyball.png"
 
 const index = props => (
   <>
@@ -40,26 +43,30 @@ const index = props => (
               skola.
             </p>
             <div className={MainStyle.whatWeDoIcons}>
-              {/* <Img
-                fluid={props.data.imageThree.childImageSharp.fluid}
-                alt="hantel"
-                style={{ width: "50px" }}
-              />
-              <p>Gymmar</p>
-
-              <Img
-                fluid={props.data.imageFour.childImageSharp.fluid}
-                alt="pingis"
-                style={{ width: "50px" }}
-              />
-              <p>Spelar pingis</p>
-
-              <Img
-                fluid={props.data.imageFive.childImageSharp.fluid}
-                alt="handboll"
-                style={{ width: "50px" }}
-              />
-              <p>Skjuter handboll</p> */}
+              <div className={MainStyle.whatWeDoIconsBoxes}>
+                <div>
+                  <HantelSVG style={{ width: "50px", height: "50px" }} />
+                </div>
+                <div>
+                  <p>Gymmar</p>
+                </div>
+              </div>
+              <div className={MainStyle.whatWeDoIconsBoxes}>
+                <div>
+                  <PingisSVG style={{ width: "50px", height: "50px" }} />
+                </div>
+                <div>
+                  <p>Spelar pingis</p>
+                </div>
+              </div>
+              <div className={MainStyle.whatWeDoIconsBoxes}>
+                <div>
+                  <HandbollSVG style={{ width: "50px", height: "50px" }} />
+                </div>
+                <div>
+                  <p>Skjuter handboll</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className={MainStyle.whatWeDoImageText}>
@@ -77,6 +84,18 @@ const index = props => (
         </div>
         <div className={MainStyle.whatWeDoImage}>
           <Img fluid={props.data.imageTwo.childImageSharp.fluid} />
+        </div>
+      </section>
+      <section className={MainStyle.InfoContainer}>
+        <div className={MainStyle.InfoContainerImageBox}>
+          <Img fluid={props.data.imageThree.childImageSharp.fluid} />
+        </div>
+        <div className={MainStyle.InfoContainerImageText}>
+          <h1>Styrkelyft sedan 2000</h1>
+          <p className={MainStyle.InfoContainerImageTextParagraph}>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word ”and” and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+          <Link to="/omoss" className={MainStyle.whatWeDoButton}>
+            Läs mer
+          </Link>
         </div>
       </section>
     </Layout>
@@ -113,13 +132,7 @@ export const pageQuery = graphql`
     imageTwo: file(relativePath: { eq: "whatWeDo.jpg" }) {
       ...fluidImage
     }
-    imageThree: file(relativePath: { eq: "dumbbell.png" }) {
-      ...fluidImage
-    }
-    imageFour: file(relativePath: { eq: "ping-pong.png" }) {
-      ...fluidImage
-    }
-    imageFive: file(relativePath: { eq: "volleyball.png" }) {
+    imageThree: file(relativePath: { eq: "infobox.jpg" }) {
       ...fluidImage
     }
   }
