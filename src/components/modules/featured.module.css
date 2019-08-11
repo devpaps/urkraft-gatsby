@@ -1,0 +1,76 @@
+.whatWeDoButton {
+  display: inline-block;
+  background: transparent;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #fff;
+  margin: 1em 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  text-decoration: none;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.whatWeDoButton:hover {
+  color: #fff;
+  background: #f80f00;
+  border: 0.1em solid rgb(248, 15, 0);
+  text-decoration: none;
+  -webkit-box-shadow: 5px 6px 20px rgba(248, 15, 0, 25%);
+  box-shadow: 5px 6px 20px rgba(248, 15, 0, 25%);
+}
+
+.InfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #151617;
+  color: #fff;
+}
+
+.InfoContainerImageBox {
+  width: 50%;
+}
+
+
+.InfoContainerImageText {
+  width: 50%;
+  padding: 3em;
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 0 3em
+}
+
+
+.InfoContainerImageText h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.InfoContainerImageTextParagraph {
+  font-size: 1em;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .InfoContainer {
+    display: block;
+    margin: auto;
+  }
+
+  .InfoContainerImageBox {
+    width: 100%;
+  }
+
+  .InfoContainerImageText {
+    width: 100%;
+    padding: 2em 3em;
+  }
+
+  .InfoContainerImageText h1 {
+    font-size: 2em;
+  }
+}

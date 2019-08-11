@@ -95,6 +95,7 @@
 .whatWeDoButton {
   display: inline-block;
   padding: 0.35em 1.2em;
+  background: transparent;
   border: 0.1em solid #fff;
   margin: 1em 0.3em 0.3em 0;
   border-radius: 0.12em;
@@ -286,7 +287,8 @@
   width: 50%;
   padding: 3em;
   margin: 0 auto;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   padding: 0 3em
 }
 
@@ -311,11 +313,11 @@
     width: 100%;
   }
 
-.InfoContainerImageText {
-  width: 100%;
-  padding: 2em 3em;
-}
-  
+  .InfoContainerImageText {
+    width: 100%;
+    padding: 2em 3em;
+  }
+
   .InfoContainerImageText h1 {
     font-size: 2em;
   }

@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Featured from "../components/Featured"
 import "../assets/css/reboot.css"
 import Img from "gatsby-image"
 import { Link, graphql } from "gatsby"
@@ -86,17 +87,29 @@ const index = props => (
           <Img fluid={props.data.imageTwo.childImageSharp.fluid} />
         </div>
       </section>
-      <section className={MainStyle.InfoContainer}>
+      {/*       <section className={MainStyle.InfoContainer}>
         <div className={MainStyle.InfoContainerImageBox}>
           <Img fluid={props.data.imageThree.childImageSharp.fluid} />
         </div>
         <div className={MainStyle.InfoContainerImageText}>
           <h1>Styrkelyft sedan 2000</h1>
-          <p className={MainStyle.InfoContainerImageTextParagraph}>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word ”and” and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+          <p className={MainStyle.InfoContainerImageTextParagraph}>
+            On her way she met a copy. The copy warned the Little Blind Text,
+            that where it came from it would have been rewritten a thousand
+            times and everything that was left from its origin would be the word
+            ”and” and the Little Blind Text should turn around and return to its
+            own, safe country. But nothing the copy said could convince her and
+            so it didn’t take long until a few insidious Copy Writers ambushed
+            her, made her drunk with Longe and Parole and dragged her into their
+            agency, where they abused her for their.
+          </p>
           <Link to="/omoss" className={MainStyle.whatWeDoButton}>
             Läs mer
           </Link>
         </div>
+      </section> */}
+      <section>
+        <Featured />
       </section>
     </Layout>
   </>

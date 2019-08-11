@@ -4,9 +4,14 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Urkraft Gym`,
+    description: `På Urkraft Gym kommer du finna en härlig mix av människor, gamla som unga som alla vill få ett bättre välbefinnande.`,
   },
   plugins: [
     {
@@ -49,6 +54,15 @@ module.exports = {
         rule: {
           include: /svg/,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `xjvps6qvbbfd`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        downloadLocal: true,
       },
     },
   ],
