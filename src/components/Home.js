@@ -36,17 +36,15 @@ export default () => (
     render={data => (
       <>
         {data.allContentfulBlog.edges.map(edge => (
-          <div className={MainStyle.BlogContainer} key={edge.node.id}>
-            <div className={MainStyle.BlogContainerImageBox}>
-              <Img
-                fluid={edge.node.featuredImage.fluid}
-                alt={edge.node.featuredImage.title}
-              />
-              onClick={() => navigate(`/blog/${edge.node.slug}`)}
-              {edge.node.category.map(categories => (
-                <p>{categories.category}</p>
-              ))}
-            </div>
+          <div
+            key={edge.node.id}
+            className={MainStyle.card}
+            onClick={() => navigate(`/blog/${edge.node.slug}`)}
+          >
+            <Img fluid={edge.node.featuredImage.fluid} alt="oss" />
+            {edge.node.category.map(categories => (
+              <p>{categories.title}</p>
+            ))}
             <p>{edge.node.title}</p>
           </div>
         ))}
