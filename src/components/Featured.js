@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, navigate, StaticQuery, Link } from "gatsby"
+import { graphql, navigate, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import MainStyle from "../components/modules/featured.module.css"

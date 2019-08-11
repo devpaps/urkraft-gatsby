@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Featured from "../components/Featured"
+import Home from "../components/Home"
 import "../assets/css/reboot.css"
 import Img from "gatsby-image"
 import { Link, graphql } from "gatsby"
@@ -110,6 +111,9 @@ const index = props => (
       </section> */}
       <section>
         <Featured />
+      </section>
+      <section>
+        <Home />
       </section>
     </Layout>
   </>
