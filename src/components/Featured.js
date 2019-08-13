@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, navigate, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import MainStyle from "../components/modules/featured.module.css"
+import FeaturedStyle from "../components/modules/featured.module.css"
 
 export default () => (
   <StaticQuery
@@ -33,24 +33,24 @@ export default () => (
     render={data => (
       <>
         {data.allContentfulBlog.edges.map(edge => (
-          <div className={MainStyle.InfoContainer} key={edge.node.id}>
-            <div className={MainStyle.InfoContainerImageBox}>
+          <div className={FeaturedStyle.InfoContainer} key={edge.node.id}>
+            <div className={FeaturedStyle.InfoContainerImageBox}>
               <Img fluid={edge.node.featuredImage.fluid} alt="oss" />
             </div>
-            <div className={MainStyle.InfoContainerImageText}>
+            <div className={FeaturedStyle.InfoContainerImageText}>
               <h1>{edge.node.title}</h1>
-              <p className={MainStyle.InfoContainerImageTextParagraph}>
+              <p className={FeaturedStyle.InfoContainerImageTextParagraph}>
                 {edge.node.shortDescription}
               </p>
               <button
                 onClick={() => navigate(`/blog${edge.node.slug}`)}
-                className={MainStyle.whatWeDoButton}
+                className={FeaturedStyle.whatWeDoButton}
               >
                 Läs mer
               </button>
             </div>
             {/* <button
-              className={MainStyle.whatWeDoButton}
+              className={FeaturedStyle.whatWeDoButton}
               onClick={() => navigate(`/blog${edge.node.slug}`)}
             >
               Läs mer

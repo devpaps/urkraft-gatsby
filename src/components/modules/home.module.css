@@ -1,0 +1,25 @@
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1600px;
+  margin: 10em auto;
+}
+
+.homeLeft {
+  width: 50%;
+}
+
+.homeRight {
+  width: 50%;
+}
+
+.homeRightCompetitionBox {
+  color: #fff;
+  width: 400px;
+  height: 270px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 40px 0;
+  background: linear-gradient(to bottom, rgba(10,10,10,0)0%,  rgba(10,10,10,0)50%, rgba(10,10,10,0.7)100%), url(../../assets/images/nyheterblob.png) no-repeat center;
+}
