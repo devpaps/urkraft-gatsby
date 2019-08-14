@@ -4,22 +4,207 @@
   display: flex;
   max-width: 1600px;
   margin: 10em auto;
+  padding: 0 2em;
 }
 
 .homeLeft {
-  width: 50%;
+
+}
+
+.homeText {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeLeftCards {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.image {
+  flex: 1;
+}
+
+.cardText {
+  flex: 1 0 35%;
+  margin-left: 2em;
+}
+
+.cardText p:nth-of-type(1) {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.homeLeft span {
+  vertical-align: middle;
 }
 
 .homeRight {
-  width: 50%;
+  
 }
 
 .homeRightCompetitionBox {
   color: #fff;
-  width: 400px;
-  height: 270px;
-  margin: auto;
+  margin: auto 6em;
   border-radius: 5px;
   padding: 40px 0;
+  display: flex;
   background: linear-gradient(to bottom, rgba(10,10,10,0)0%,  rgba(10,10,10,0)50%, rgba(10,10,10,0.7)100%), url(../../assets/images/nyheterblob.png) no-repeat center;
+}
+
+.homeRightCompetitionBoxText {
+  padding: 0 40px;
+}
+
+.homeRightCompetitionBox p {
+  color: #F0F0F0;
+  margin: 0;
+}
+
+.homeRightCompetitionBox h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.homeRightCompetitionBox p:nth-child(3) {
+  color: #e2e2e2;
+}
+
+.button {
+  display: inline-block;
+  margin: 1.5em auto 0;
+  padding: 0;
+  width: 165px;
+  height: 45px;
+  border: 2px solid rgba(248, 15, 0, .5);
+  letter-spacing: 1px;
+  border-radius: 40px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  background:  rgb(248, 15, 0);
+}
+
+.button:hover .buttonIcon {
+  opacity: 1;
+  margin-left: 5px;
+  vertical-align: text-top;
+}
+
+.buttonIcon {
+  vertical-align: text-top;
+  opacity: 0;
+  transition: 200ms all;
+}
+
+.homeRightMemberBox {
+  color: #fff;
+  margin: 5em 6em;
+  border-radius: 5px;
+  padding: 40px 0;
+  background: rgb(248, 15, 0);
+  display: flex;
+  flex-direction: column;
+}
+
+.homeRightMemberBoxText {
+  padding: 0 40px;
+}
+
+.homeRightMemberBoxText h1 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.homeRightMemberBoxText p {
+  margin-bottom: 1.8em;
+}
+
+.homeRightMemberBoxText input[type=email] {
+  padding: 0.75em 1em;
+  width: 100%;
+  display: block;
+  border-radius: 0.25em;
+  border-color: #edf2f7;
+  background:#edf2f7;
+  appearance: none;
+  border: 0 solid #e2e8f0;
+}
+
+.homeRightMemberBoxText input[type=email]:focus {
+  outline: none;
+  background: #fff;
+}
+
+.buttonMember {
+  display: block;
+  background: transparent;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #fff;
+  margin: 2em 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: 400;
+}
+
+.buttonMember:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media screen and (max-width: 1230px) {
+  .home {
+    display: block;
+  }
+  .homeRight {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+.homeRight {
+  display: block;
+  margin-top: 7em; 
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .homeText {
+    display: block;
+  }
+  .homeLeftCards {
+    display: block;
+  }
+  .card {
+    display: block;
+  }
+
+  .cardText {
+    margin: 2em 0 0; 
+  }
+
+
+}
+
+@media screen and (max-width: 650px) {
+  .homeRightCompetitionBox {
+    margin: 2em 0;
+  }
+  .homeRightMemberBox {
+    margin: 2em 0;
+  }
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, navigate, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { FiArrowRight } from "react-icons/fi";
 
 import HomeStyle from "../components/modules/home.module.css"
 
@@ -27,7 +28,10 @@ export default () => (
                   src
                   ...GatsbyContentfulFluid
                 }
+                title
               }
+              shortDescription
+              updatedAt(fromNow: true)
             }
           }
         
@@ -42,6 +46,8 @@ export default () => (
               id
               title
               slug
+              information
+              whereAndWhen
             }
           }
         }
@@ -51,33 +57,48 @@ export default () => (
     render={data => (
       <div className={HomeStyle.home}>
         <div className={HomeStyle.homeLeft}>
-          <h1>Senaste Nyheter</h1>
-          <p>Visa alla</p>
-          {data.HomeQuery.edges.map(edge => (
-            <div
-              key={edge.node.id}
-              className={HomeStyle.card}
-              onClick={() => navigate(`/blog/${edge.node.slug}`)}
-            >
-              <Img fluid={edge.node.featuredImage.fluid} alt="oss" />
-              {edge.node.category.map(categories => (
-                <p>{categories.title}</p>
-              ))}
-              <p>{edge.node.title}</p>
-            </div>
-          ))}
+          <div className={HomeStyle.homeText}>
+            <h1>Senaste Nyheterna</h1>
+            <p>Visa alla <span>></span></p>
+          </div>
+          <div className={HomeStyle.homeLeftCards}>
+            {data.HomeQuery.edges.map(edge => (
+              <div
+                key={edge.node.id}
+                className={HomeStyle.card}
+                onClick={() => navigate(`/blog/${edge.node.slug}`)}
+              >
+                <div className={HomeStyle.image}> <Img fluid={edge.node.featuredImage.fluid} alt={edge.node.featuredImage.title} /></div>
+                <div className={HomeStyle.cardText}>
+                  <span>Taggar: {edge.node.category.map(categories => (
+                    <p style={{ display: 'inline' }}>{categories.title} </p>
+                  ))} Updaterad: {edge.node.updatedAt}</span>
+
+                  <p>{edge.node.shortDescription}</p>
+                  <p>{edge.node.featuredImage.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className={HomeStyle.homeRight}>
           <div className={HomeStyle.homeRightCompetitionBox}>
             {data.Tavling.edges.map(edge => (
-              <div key={edge.node.id} onClick={() => navigate(`/tavling/${edge.node.slug}`)}>
-                <p>asd</p>
+              <div key={edge.node.id} className={HomeStyle.homeRightCompetitionBoxText}>
+                <p>{edge.node.information}</p>
                 <h1>{edge.node.title}</h1>
+                <p>{edge.node.whereAndWhen}</p>
+                <button className={HomeStyle.button} onClick={() => navigate(`/tavling/${edge.node.slug}`)}>Anmälan<FiArrowRight className={HomeStyle.buttonIcon} /></button>
               </div>
             ))}
           </div>
           <div className={HomeStyle.homeRightMemberBox}>
-            <p>Bli medlem</p>
+            <div className={HomeStyle.homeRightMemberBoxText}>
+              <h1>Bli medlem hos oss</h1>
+              <p>Blev inte beachformen som du hade tänkt dig? Ingen fara, lös ett träningskort på Urkraft för 300:- så rockar du på stranden nästa år.</p>
+              <input type="email" name="email" placeholder="Ange er e-mail här" />
+              <button className={HomeStyle.buttonMember}>Bli medlem</button>
+            </div>
           </div>
         </div>
       </div>
