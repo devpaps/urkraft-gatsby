@@ -217,6 +217,12 @@
   }
   .card {
     display: block;
+    padding: 1em;
+    background: rgb(248, 15, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #010101;
+    color: #fff;
   }
 
   .cardText {
