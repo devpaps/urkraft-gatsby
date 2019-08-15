@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, navigate, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { FiArrowRight } from "react-icons/fi";
+import { FiEdit3 } from "react-icons/fi";
 
 import HomeStyle from "../components/modules/home.module.css"
 
@@ -12,7 +13,7 @@ export default () => (
         allContentfulBlog(
           limit: 3
           sort: { fields: [createdAt], order: DESC }
-          filter: { node_locale: { eq: "en-US" }, home: { eq: true } }
+          filter: { node_locale: { eq: "sv-SE" }, home: { eq: true } }
         ) {
           edges {
             node {
@@ -31,7 +32,7 @@ export default () => (
                 title
               }
               shortDescription
-              updatedAt(fromNow: true)
+              createdAt(formatString: "Do MMM, YYYY", locale: "sv-SE")
             }
           }
         
@@ -68,12 +69,13 @@ export default () => (
                 className={HomeStyle.card}
                 onClick={() => navigate(`/blog/${edge.node.slug}`)}
               >
-                <div className={HomeStyle.image}> <Img fluid={edge.node.featuredImage.fluid} alt={edge.node.featuredImage.title} /></div>
+                <div className={HomeStyle.image}> <Img fluid={edge.node.featuredImage.fluid} alt={edge.node.featuredImage.title} className={HomeStyle.imageBox} /></div>
                 <div className={HomeStyle.cardText}>
-                  <span>Taggar: {edge.node.category.map(categories => (
-                    <p style={{ display: 'inline' }}>{categories.title} </p>
-                  ))} Updaterad: {edge.node.updatedAt}</span>
-
+                  <span>{edge.node.category.map(categories => (
+                    <p className={HomeStyle.tags}>{categories.title.split(' ')} </p>
+                  ))}</span>
+                  {<p style={{ margin: '0.5em 0 1em' }}><FiEdit3 />  {edge.node.createdAt}</p>}
+                  <h3>{edge.node.title}</h3>
                   <p>{edge.node.shortDescription}</p>
                   <p>{edge.node.featuredImage.text}</p>
                 </div>

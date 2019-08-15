@@ -11,7 +11,7 @@ export default () => (
         allContentfulBlog(
           limit: 1
           sort: { fields: [createdAt], order: DESC }
-          filter: { node_locale: { eq: "en-US" }, featured: { eq: true } }
+          filter: { node_locale: { eq: "sv-SE" }, featured: { eq: true } }
         ) {
           edges {
             node {

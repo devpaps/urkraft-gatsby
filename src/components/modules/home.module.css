@@ -1,7 +1,8 @@
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 555px;
   max-width: 1600px;
   margin: 10em auto;
   padding: 0 2em;
@@ -25,10 +26,22 @@
   display: flex;
   align-items: center;
   margin-top: 3em;
+  transition: background 200ms;
+}
+
+.card:hover {
+  cursor: pointer;
+  background: rgb(248, 15, 0);
+  color: #fff;
+  border-radius: 5px;
 }
 
 .image {
   flex: 1;
+}
+
+.imageBox {
+  border-radius: 5px;
 }
 
 .cardText {
@@ -36,9 +49,22 @@
   margin-left: 2em;
 }
 
+.cardText h3 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
 .cardText p:nth-of-type(1) {
   margin-top: 1em;
   margin-bottom: 0;
+}
+
+.tags {
+  display: inline;
+  color: #404040;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
 }
 
 .homeLeft span {
