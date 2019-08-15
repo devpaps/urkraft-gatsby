@@ -2,8 +2,6 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import "../assets/css/style.css"
 
-/* import { IoMdMegaphone } from "react-icons/io" */
-
 import NavStyle from "../components/modules/navbar.module.css"
 
 const header = {

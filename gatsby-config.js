@@ -14,6 +14,7 @@ module.exports = {
     description: `På Urkraft Gym kommer du finna en härlig mix av människor, gamla som unga som alla vill få ett bättre välbefinnande.`,
   },
   plugins: [
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

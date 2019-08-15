@@ -43,7 +43,7 @@ export default () => (
                 {edge.node.shortDescription}
               </p>
               <button
-                onClick={() => navigate(`/blog${edge.node.slug}`)}
+                onClick={() => navigate(`/blog/${edge.node.slug}`)}
                 className={FeaturedStyle.whatWeDoButton}
               >
                 Läs mer
