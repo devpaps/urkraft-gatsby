@@ -24,11 +24,42 @@ header ul li {
 header ul li a {
   color: #fff;
   text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: #000;
+}
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  border-bottom: 2px solid #000;
+  transition: width 0.3s ease;
+}
+
+header ul li a:hover::after {
+  left: 0;
+  width: 100%;
+  transition: width 0.3s ease;
 }
 
 @media (max-width: 600px) {
   header ul {
     display: block;
+  }
+
+  header ul li a::after {
+    display: none;
   }
 
   .cd-stretchy-nav {

@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import "../assets/css/style.css"
 
 import NavStyle from "../components/modules/navbar.module.css"
 
+import "../assets/css/style.css"
 const header = {
   display: "flex",
   alignItems: "center",
