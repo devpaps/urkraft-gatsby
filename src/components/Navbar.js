@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import "../assets/css/style.css"
 
 import NavStyle from "../components/modules/navbar.module.css"
 
@@ -39,17 +38,22 @@ const Navbar = () => {
           <ul>
             <li>
               <Link to="/omoss">
-                <span>Om oss</span>
+                <span className={NavStyle.link}>Om oss</span>
               </Link>
             </li>
             <li>
               <Link to="/senastenytt">
-                <span>Senaste Nytt</span>
+                <span className={NavStyle.link}>Senaste Nytt</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/blog">
+                <span className={NavStyle.link}>Blogg</span>
               </Link>
             </li>
             <li>
               <Link to="/kontakt">
-                <span>Kontakt</span>
+                <span className={NavStyle.link}>Kontakt</span>
               </Link>
             </li>
           </ul>
