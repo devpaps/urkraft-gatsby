@@ -64,7 +64,7 @@ export default () => (
           </div>
           <div className={HomeStyle.homeLeftCards}>
             {data.HomeQuery.edges.map(edge => (
-              <div
+              <article
                 key={edge.node.id}
                 className={HomeStyle.card}
                 onClick={() => navigate(`/blog/${edge.node.slug}`)}
@@ -94,7 +94,7 @@ export default () => (
                   <p>{edge.node.shortDescription}</p>
                   <p>{edge.node.featuredImage.text}</p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
