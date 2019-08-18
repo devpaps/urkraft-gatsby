@@ -18,7 +18,10 @@ header ul {
 
 header ul li {
   list-style: none;
-  margin-left: 1em;
+}
+
+header ul li:nth-child(1n + 2) {
+  margin-left: 2em;
 }
 
 header ul li a {
