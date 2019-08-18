@@ -110,7 +110,7 @@ export default () => (
                 <p>{edge.node.whereAndWhen}</p>
                 <button
                   className={HomeStyle.button}
-                  onClick={() => navigate(`/tavling/${edge.node.slug}`)}
+                  onClick={() => navigate(`/blog/${edge.node.slug}`)}
                 >
                   Anmälan
                   <FiArrowRight className={HomeStyle.buttonIcon} />

@@ -29,11 +29,8 @@ const Navbar = () => {
             <span> |</span> <span>Svettas eller gå hem!</span>
           </h1>
         </Link>
-        <nav
-          onClick={open}
-          className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}
-        >
-          <span className="cd-nav-trigger" href="#">
+        <nav className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}>
+          <span onClick={open} className="cd-nav-trigger" href="#">
             <span aria-hidden="true"></span>
           </span>
           <ul>

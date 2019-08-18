@@ -1,0 +1,46 @@
+.footer {
+  background: #333;
+  color: #ccc;
+}
+
+.container {
+  margin: 5em auto 0;
+  max-width: 1600px;
+}
+
+.widgets {
+  padding: 55px 0;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.link {
+  color: #fff;
+}
+
+.link:nth-child(1n + 2) {
+  margin-left: 2em;
+}
+
+.facebookIcon {
+  width: 2em;
+  height: 2em;
+}
+
+@media screen and (max-width: 650px) {
+  .widgets {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .facebookIcon {
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .link:nth-child(1n + 2) {
+    margin-left: 1em;
+  }
+}
