@@ -110,6 +110,7 @@ export const fluidImage = graphql`
     childImageSharp {
       fluid(maxWidth: 1400) {
         ...GatsbyImageSharpFluid
+        tracedSVG
       }
     }
   }

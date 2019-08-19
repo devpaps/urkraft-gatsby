@@ -3,6 +3,7 @@ import { graphql, navigate, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { FiArrowRight } from "react-icons/fi"
 import { FiEdit3 } from "react-icons/fi"
+import { IoMdPricetag } from "react-icons/io"
 
 import HomeStyle from "../components/modules/home.module.css"
 
@@ -27,12 +28,14 @@ export default () => (
               featuredImage {
                 fluid(maxWidth: 1200, quality: 100) {
                   src
+                  tracedSVG
                   ...GatsbyContentfulFluid
                 }
                 title
               }
               shortDescription
               createdAt(formatString: "Do MMM, YYYY", locale: "sv-SE")
+              seoAuthor
             }
           }
         }
@@ -79,15 +82,16 @@ export default () => (
                 </div>
                 <div className={HomeStyle.cardText}>
                   <span>
+                    <IoMdPricetag />
                     {edge.node.category.map(categories => (
-                      <p className={HomeStyle.tags}>
-                        {categories.title.split(" ")}{" "}
-                      </p>
+                      <p className={HomeStyle.tags}>{categories.title}</p>
                     ))}
                   </span>
                   {
                     <p style={{ margin: "0.5em 0 1em" }}>
                       <FiEdit3 /> {edge.node.createdAt}
+                      {" - "}
+                      <span> Av {edge.node.seoAuthor}</span>
                     </p>
                   }
                   <h3>{edge.node.title}</h3>

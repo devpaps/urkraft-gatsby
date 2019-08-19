@@ -42,6 +42,10 @@
   border-radius: 5px;
 }
 
+.card:hover .tags {
+  color: #fff;
+}
+
 .image {
   flex: 1;
 }
@@ -61,6 +65,10 @@
   margin-bottom: 0;
 }
 
+.cardText span {
+  font-weight: 700;
+}
+
 .cardText p:nth-of-type(1) {
   margin-top: 1em;
   margin-bottom: 0;
@@ -72,6 +80,7 @@
   text-transform: uppercase;
   font-size: 0.8em;
   font-weight: 600;
+  margin-left: 1em;
 }
 
 .homeLeft span {
@@ -226,16 +235,13 @@
   }
   .card {
     display: block;
-    padding: 1em;
-    background: rgb(248, 15, 0);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border: 1px solid #010101;
     color: #fff;
   }
 
   .cardText {
-    margin: 2em 0 0;
+    margin: 0;
+    background: rgb(248, 15, 0);
+    padding: 1em;
   }
 }
 

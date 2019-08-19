@@ -23,6 +23,7 @@ export default () => (
                 fluid(maxWidth: 1200, quality: 100) {
                   src
                   ...GatsbyContentfulFluid_tracedSVG
+                  tracedSVG
                 }
               }
             }
