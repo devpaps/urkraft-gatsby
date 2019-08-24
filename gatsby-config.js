@@ -11,7 +11,6 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Urkraft Gym`,
-    description: `På Urkraft Gym kommer du finna en härlig mix av människor, gamla som unga som alla vill få ett bättre välbefinnande.`,
   },
   plugins: [
     `gatsby-transformer-remark`,

@@ -1,18 +1,25 @@
 .footer {
   background: #333;
   color: #ccc;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .container {
-  margin: 5em auto 0;
+  margin: 0 auto;
   max-width: 1600px;
 }
 
 .widgets {
-  padding: 55px 0;
+  padding: 35px 0;
   display: flex;
   justify-content: space-around;
   align-content: center;
+}
+
+.widgets div:nth-child(1n + 1) {
+  align-self: center;
 }
 
 .link {
@@ -36,6 +43,9 @@
 
   .facebookIcon {
     margin-top: 2em;
+  }
+  h4 {
+    font-size: 1.5em;
   }
 }
 

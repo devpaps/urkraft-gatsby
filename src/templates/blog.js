@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 
@@ -7,6 +8,9 @@ import blogStyle from "../components/modules/blog.module.css"
 const BlogTemplate = props => {
   return (
     <Layout>
+      <Helmet>
+        <title>Urkraft Gym - Blogg</title>
+      </Helmet>
       <div className="header">
         <h1>{props.data.contentfulBlog.title}</h1>
         <div className="blogWrapper">

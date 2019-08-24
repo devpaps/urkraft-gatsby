@@ -1,16 +1,18 @@
 import React from "react"
+import Img from "gatsby-image"
+import { Helmet } from "react-helmet"
+
 import Layout from "../components/Layout"
 import Featured from "../components/Featured"
 import Home from "../components/Home"
-import Footer from "../components/Footer"
-import "../assets/css/reboot.css"
-import Img from "gatsby-image"
+
 import { Link, graphql } from "gatsby"
 
 import HantelSVG from "../assets/images/svg/dumbbell.svg"
 import PingisSVG from "../assets/images/svg/ping-pong.svg"
 import HandbollSVG from "../assets/images/svg/volleyball.svg"
 
+import "../assets/css/reboot.css"
 import MainStyle from "../components/modules/mainstyle.module.css"
 import "../assets/css/global.css"
 
@@ -93,11 +95,9 @@ const index = props => (
       <section>
         <Featured />
       </section>
-      <section>
+
+      <section style={{ paddingBottom: "10em" }}>
         <Home />
-      </section>
-      <section>
-        <Footer />
       </section>
     </Layout>
   </>
