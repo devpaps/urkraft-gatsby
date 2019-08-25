@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
 import Styles from "../components/modules/layout.module.css"
+import "../assets/css/reboot.css"
 
 const Layout = props => (
   <section className={Styles.container}>

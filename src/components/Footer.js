@@ -10,10 +10,15 @@ const Footer = () => {
         <div className={FooterStyle.widgets}>
           <div className={FooterStyle.left}>
             <Link to="/" className={FooterStyle.link}>
-              <h4>Urkraft &copy; {new Date().getFullYear()}</h4>
+              <h2>Urkraft &copy; {new Date().getFullYear()}</h2>
             </Link>
+            <div className={FooterStyle.footerBottom}>
+              <h3>Öppettider</h3>
+              <p>Alla dagar 06 - 21 </p>
+            </div>
           </div>
           <div className={FooterStyle.center}>
+            <h3>Länkar</h3>
             <Link to="/omoss" className={FooterStyle.link}>
               Om oss
             </Link>
@@ -28,6 +33,22 @@ const Footer = () => {
             </Link>
           </div>
           <div className={FooterStyle.right}>
+            <h3>Kontakt</h3>
+            <span>E-post</span>
+            <a
+              style={{ display: "block", marginBottom: "1em" }}
+              href="mailto:info@urkraftgym.se"
+            >
+              info@urkraftgym.se
+            </a>
+            <span>Telefon</span>
+            <a
+              style={{ display: "block", marginBottom: "2em" }}
+              href="tel:070-112233"
+            >
+              070-112233
+            </a>
+
             <a
               style={{ color: "#fff" }}
               href="https://www.facebook.com/TasjodalensIK/"

@@ -1,7 +1,7 @@
 .footer {
-  background: #333;
-  color: #ccc;
-  position: absolute;
+  background: #151617;
+  color: #fff;
+
   bottom: 0;
   width: 100%;
 }
@@ -19,14 +19,14 @@
 }
 
 .widgets div:nth-child(1n + 1) {
-  align-self: center;
+  align-self: baseline;
 }
 
 .link {
   color: #fff;
 }
 
-.link:nth-child(1n + 2) {
+.link:nth-child(1n + 3) {
   margin-left: 2em;
 }
 
@@ -35,10 +35,16 @@
   height: 2em;
 }
 
-@media screen and (max-width: 650px) {
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 770px) {
   .widgets {
     flex-direction: column;
     align-items: center;
+    padding: 20px;
   }
 
   .facebookIcon {
@@ -50,7 +56,23 @@
 }
 
 @media screen and (max-width: 500px) {
-  .link:nth-child(1n + 2) {
+  .link:nth-child(n + 1) {
+    margin-left: 0;
+  }
+
+  .link:nth-child(n + 3) {
     margin-left: 1em;
+  }
+
+  .left {
+    margin-top: 3em;
+  }
+
+  .center {
+    margin-top: 3em;
+  }
+
+  .right {
+    margin-top: 3em;
   }
 }

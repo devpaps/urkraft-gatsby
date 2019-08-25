@@ -1,7 +1,10 @@
 import React from "react"
 import { Link, graphql, navigate } from "gatsby"
-import window from "browser-monads"
+import { window } from "browser-monads"
 import Layout from "../components/Layout"
+import { IoMdPricetag } from "react-icons/io"
+
+import ArchiveStyle from "../components/modules/archive.module.css"
 
 const Archive = props => {
   const blogContent = props.data.allContentfulBlog
@@ -13,7 +16,32 @@ const Archive = props => {
 
   return (
     <Layout>
-      <p>sd</p>
+      <section style={{ paddingBottom: "10em" }}>
+        <div className={ArchiveStyle.feed}>
+          {blogContent.edges.map(edge => (
+            <div
+              key={edge.node.id}
+              className={ArchiveStyle.card}
+              style={{
+                backgroundImage: `linear-gradient(
+                    to bottom,
+                    rgba(10,10,10,0) 0%,
+                    rgba(10,10,10,0) 50%,
+                    rgba(10,10,10,0.7) 100%),
+                    url(${edge.node.featuredImage.fluid.src})`,
+              }}
+              onClick={() => navigate(`/blog/${edge.node.slug}`)}
+            >
+              {edge.node.category.map(categories => (
+                <p className={ArchiveStyle.card__category}>
+                  <IoMdPricetag /> {categories.title}
+                </p>
+              ))}
+              <p className={ArchiveStyle.card__title}>{edge.node.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </Layout>
   )
 }
