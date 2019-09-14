@@ -1,3 +1,8 @@
+.mainHero {
+  position: relative;
+  top: 85px;
+}
+
 .heroContainer {
   position: relative;
 }

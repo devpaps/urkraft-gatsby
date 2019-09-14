@@ -34,6 +34,7 @@ header ul {
 
 header ul li {
   list-style: none;
+  will-change: transform;
 }
 
 header ul li:nth-child(1n + 2) {
@@ -86,6 +87,7 @@ header ul li a:hover::after {
     z-index: 2;
     top: 140px;
     right: 5%;
+    will-change: auto;
   }
 
   .cd-stretchy-nav .stretchy-nav-bg {
