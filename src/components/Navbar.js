@@ -1,9 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 import NavStyle from "../components/modules/navbar.module.css"
 
 import "../assets/css/style.css"
+import { FiCloudLightning } from "react-icons/fi"
+
 const header = {
   display: "flex",
   alignItems: "center",
@@ -14,51 +16,83 @@ const header = {
 }
 
 const Navbar = () => {
+  let [currentPos, setCurrentPos] = useState(null)
+  let [visible, setVisible] = useState(true)
+
   const [openMenu, setOpenMenu] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let lastPosition = window.pageYOffset
+
+      setVisible(currentPos > lastPosition || lastPosition < 50)
+      setCurrentPos(lastPosition)
+      console.log("currentPos " + currentPos, "lastPosition " + lastPosition)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  })
 
   const open = () => {
     setOpenMenu(!openMenu)
   }
 
   return (
-    <header style={{ background: "#F80F00" }}>
-      <div style={header}>
-        <Link to="/" className={NavStyle.headerText}>
-          <h1 className={NavStyle.headerNavText}>
-            Urkraft <span style={{ fontWeight: "300" }}>Gym</span>
-            <span> |</span> <span>Svettas eller gå hem!</span>
-          </h1>
-        </Link>
-        <nav className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}>
-          <span onClick={open} className="cd-nav-trigger" href="#">
-            <span aria-hidden="true"></span>
-          </span>
-          <ul>
-            <li>
-              <Link to="/omoss">
-                <span className={NavStyle.link}>Om oss</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/senastenytt">
-                <span className={NavStyle.link}>Senaste Nytt</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/blog">
-                <span className={NavStyle.link}>Blogg</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/kontakt">
-                <span className={NavStyle.link}>Kontakt</span>
-              </Link>
-            </li>
-          </ul>
-          <span aria-hidden="true" className="stretchy-nav-bg"></span>
-        </nav>
-      </div>
-    </header>
+    <div
+      style={{ background: "#F80F00" }}
+      className={
+        visible
+          ? `${NavStyle.mainHeader} active`
+          : `${NavStyle.mainHeader} hidden`
+      }
+    >
+      <header>
+        <div style={header}>
+          <Link to="/" className={NavStyle.headerText}>
+            <h1 className={NavStyle.headerNavText}>
+              Urkraft <span style={{ fontWeight: "300" }}>Gym</span>
+              <span> |</span> <span>Svettas eller gå hem!</span>
+            </h1>
+          </Link>
+          <nav
+            className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}
+          >
+            <span onClick={open} className="cd-nav-trigger" href="#">
+              <span aria-hidden="true"></span>
+            </span>
+            <ul>
+              <li>
+                <Link
+                  to="/omoss"
+                  activeStyle={{ color: "green" }}
+                  title="Om oss"
+                >
+                  <span className={NavStyle.link}>Om oss</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/senastenytt" title="Senaste nytt">
+                  <span className={NavStyle.link}>Senaste Nytt</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" title="Blogg">
+                  <span className={NavStyle.link}>Blogg</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/kontakt" title="Kontakt">
+                  <span className={NavStyle.link}>Kontakt</span>
+                </Link>
+              </li>
+            </ul>
+            <span aria-hidden="true" className="stretchy-nav-bg"></span>
+          </nav>
+        </div>
+      </header>
+    </div>
   )
 }
 

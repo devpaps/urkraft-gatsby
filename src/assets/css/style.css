@@ -1,3 +1,14 @@
+.active {
+  width: 100%;
+  padding: 10px;
+  top: 0;
+  z-index: 10;
+}
+
+.hidden {
+  top: -100px;
+}
+
 header ul {
   padding: 0;
   margin: 0;
@@ -12,8 +23,13 @@ header ul {
 }
 
 .cd-stretchy-nav.nav-is-visible ul li:nth-of-type(3) span {
-  -webkit-animation-delay: 0.1s;
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
+}
+
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(4) span {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 header ul li {
@@ -68,7 +84,7 @@ header ul li a:hover::after {
   .cd-stretchy-nav {
     position: fixed;
     z-index: 2;
-    top: 115px;
+    top: 140px;
     right: 5%;
   }
 
