@@ -1,12 +1,13 @@
 .active {
   width: 100%;
-  padding: 10px;
   top: 0;
+  transform: translateY(0px);
   z-index: 10;
 }
 
 .hidden {
-  top: -100px;
+  /* top: -65px; */
+  transform: translateY(-65px);
 }
 
 header ul {

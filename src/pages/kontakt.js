@@ -10,7 +10,7 @@ export default () => (
       <Helmet>
         <title>Urkraft Gym - Kontakta oss</title>
       </Helmet>
-      <section className={ContactStyle.container}>
+      <section className={`innerContainer`}>
         <form>
           <div className={ContactStyle.contactForm}>
             <label className={ContactStyle.label}>

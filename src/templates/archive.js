@@ -16,7 +16,8 @@ const Archive = props => {
 
   return (
     <Layout>
-      <section style={{ paddingBottom: "10em" }}>
+      <section className={`innerContainer`}>
+        <h1>Alla inlägg</h1>
         <div className={ArchiveStyle.feed}>
           {blogContent.edges.map(edge => (
             <div

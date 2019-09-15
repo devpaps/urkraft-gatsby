@@ -9,7 +9,7 @@ import { FiCloudLightning } from "react-icons/fi"
 const header = {
   display: "flex",
   alignItems: "center",
-  height: "100px",
+  height: "65px",
   width: "90%",
   maxWidth: "1600px",
   margin: "0 auto",
@@ -66,7 +66,10 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/omoss"
-                  activeStyle={{ color: "green" }}
+                  activeStyle={{
+                    paddingBottom: "1px",
+                    borderBottom: "2px solid black",
+                  }}
                   title="Om oss"
                 >
                   <span className={NavStyle.link}>Om oss</span>

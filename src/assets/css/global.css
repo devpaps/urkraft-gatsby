@@ -10,6 +10,19 @@ body {
   padding: 0 2em;
 }
 
+.innerContainer {
+  width: 90%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 10em 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 15px;
   background: lightgray;
