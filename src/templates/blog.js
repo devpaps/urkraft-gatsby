@@ -11,14 +11,30 @@ const BlogTemplate = props => {
       <Helmet>
         <title>Urkraft Gym - Blogg</title>
       </Helmet>
-      <div className="header">
-        <h1>{props.data.contentfulBlog.title}</h1>
-        <div className="blogWrapper">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${props.data.contentfulBlog.content.childMarkdownRemark.html}`,
-            }}
-          ></div>
+      <div className={`innerContainerBlog`}>
+        <div
+          key={props.data.contentfulBlog.id}
+          className={` ${blogStyle.hero}`}
+          style={{
+            backgroundImage: `linear-gradient(
+                    to bottom,
+                    rgba(10,10,10,0) 0%,
+                    rgba(10,10,10,0) 50%,
+                    rgba(10,10,10,0.7) 100%),
+                    url(${props.data.contentfulBlog.featuredImage.fluid.src})`,
+          }}
+        >
+          {props.data.contentfulBlog.title}
+        </div>
+        <div className="header">
+          <div className={blogStyle.blogWrapper}>
+            <h1>{props.data.contentfulBlog.title}</h1>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `${props.data.contentfulBlog.content.childMarkdownRemark.html}`,
+              }}
+            ></div>
+          </div>
         </div>
       </div>
     </Layout>

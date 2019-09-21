@@ -17,6 +17,14 @@ body {
   padding: 10em 2em;
 }
 
+.innerContainerBlog {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  position: absolute;
+  top: 2em;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     padding: 0;

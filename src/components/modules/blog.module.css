@@ -3,3 +3,18 @@ img {
   width: 100%;
   height: auto;
 }
+
+.hero {
+  height: 80vh;
+  color: #fff;
+  position: relative;
+  margin: 2em 0;
+  background-size: cover;
+  background-position: center top;
+}
+
+.blogWrapper {
+  width: 90%;
+  max-width: 1024px;
+  margin: auto;
+}
