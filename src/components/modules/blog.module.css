@@ -8,7 +8,7 @@ img {
   height: 80vh;
   color: #fff;
   position: relative;
-  margin: 2em 0;
+  margin-bottom: 2em;
   background-size: cover;
   background-position: center top;
 }

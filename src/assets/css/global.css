@@ -18,11 +18,8 @@ body {
 }
 
 .innerContainerBlog {
-  width: 100%;
-  max-width: 1600px;
-  margin: auto;
-  position: absolute;
-  top: 2em;
+  position: relative;
+  top: 4em;
 }
 
 @media screen and (max-width: 600px) {
