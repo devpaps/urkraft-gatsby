@@ -30,6 +30,7 @@ const BlogTemplate = props => {
           <div className={blogStyle.blogWrapper}>
             <h1>{props.data.contentfulBlog.title}</h1>
             <div
+              className={blogStyle.content}
               dangerouslySetInnerHTML={{
                 __html: `${props.data.contentfulBlog.content.childMarkdownRemark.html}`,
               }}
