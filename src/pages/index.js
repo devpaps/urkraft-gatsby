@@ -103,7 +103,7 @@ export default index
 export const fluidImage = graphql`
   fragment fluidImage on File {
     childImageSharp {
-      fluid(maxWidth: 1400) {
+      fluid(maxWidth: 1600) {
         ...GatsbyImageSharpFluid
         tracedSVG
       }
