@@ -23,9 +23,7 @@ const BlogTemplate = props => {
                     rgba(10,10,10,0.7) 100%),
                     url(${props.data.contentfulBlog.featuredImage.fluid.src})`,
           }}
-        >
-          {props.data.contentfulBlog.title}
-        </div>
+        ></div>
         <div className="header">
           <div className={blogStyle.blogWrapper}>
             <h1>{props.data.contentfulBlog.title}</h1>

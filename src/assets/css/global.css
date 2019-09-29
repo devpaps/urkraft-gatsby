@@ -18,8 +18,6 @@ body {
 }
 
 .innerContainerBlog {
-  position: relative;
-  top: 4em;
 }
 
 @media screen and (max-width: 600px) {
