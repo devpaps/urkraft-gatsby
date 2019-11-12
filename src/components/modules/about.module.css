@@ -1,0 +1,28 @@
+.main {
+  position: relative;
+  top: 65px;
+  width: 80%;
+  padding: 5rem 0;
+  line-height: 1.7;
+  margin: auto;
+}
+
+.information::first-letter {
+  font-size: 225%;
+}
+
+.header {
+  font-size: 5rem;
+}
+
+.medlemsavgifter {
+  padding-top: 2rem;
+}
+
+.traningsavgifter {
+  padding-top: 2rem;
+}
+
+.medlem {
+  padding: 2rem 0;
+}

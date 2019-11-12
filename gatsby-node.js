@@ -15,7 +15,7 @@ const makeRequest = (graphql, request) =>
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  // Create page for each blog
+  // Skapar sida för ett blogginlägg
   const getBlog = makeRequest(
     graphql,
     `
@@ -45,6 +45,7 @@ exports.createPages = ({ actions, graphql }) => {
     })
   })
 
+  // Blogsidan med alla blogginlägg
   const getArchive = makeRequest(
     graphql,
     `
@@ -81,5 +82,34 @@ exports.createPages = ({ actions, graphql }) => {
     })
   })
 
-  return Promise.all([getBlog, getArchive])
+  // En sida för en tävling
+  const getCompetitions = makeRequest(
+    graphql,
+    `
+    {allContentfulCompetition {
+        edges {
+          node {
+            id
+            information
+            title
+            slug
+            whereAndWhen
+          }
+        }
+      }
+    }
+      `
+  ).then(result => {
+    result.data.allContentfulCompetition.edges.forEach(({ node }) => {
+      createPage({
+        path: `/competitions/${node.slug}`,
+        component: path.resolve("./src/templates/competitions.js"),
+        context: {
+          id: node.id,
+        },
+      })
+    })
+  })
+
+  return Promise.all([getBlog, getArchive, getCompetitions])
 }

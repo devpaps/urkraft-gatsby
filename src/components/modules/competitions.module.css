@@ -1,0 +1,10 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 8rem 0;
+  width: 90%;
+  max-width: 1600px;
+}
+
+.header {
+  font-size: 3rem;
+}

@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import NavStyle from "../components/modules/navbar.module.css"
 
 import "../assets/css/style.css"
-import { FiCloudLightning } from "react-icons/fi"
 
 const header = {
   display: "flex",

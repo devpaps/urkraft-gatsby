@@ -39,7 +39,6 @@ export default () => (
             }
           }
         }
-
         Tavling: allContentfulCompetition(filter: { visas: { eq: true } }) {
           edges {
             node {
@@ -114,9 +113,9 @@ export default () => (
                 <p>{edge.node.whereAndWhen}</p>
                 <button
                   className={HomeStyle.button}
-                  onClick={() => navigate(`/blog/${edge.node.slug}`)}
+                  onClick={() => navigate(`/competitions/${edge.node.slug}`)}
                 >
-                  Anmälan
+                  Läs mer
                   <FiArrowRight className={HomeStyle.buttonIcon} />
                 </button>
               </div>

@@ -50,12 +50,6 @@ export default () => (
                 Läs mer
               </button>
             </div>
-            {/* <button
-              className={FeaturedStyle.whatWeDoButton}
-              onClick={() => navigate(`/blog${edge.node.slug}`)}
-            >
-              Läs mer
-            </button> */}
           </div>
         ))}
       </>
