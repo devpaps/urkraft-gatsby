@@ -26,7 +26,6 @@ const Navbar = () => {
 
       setVisible(currentPos > lastPosition || lastPosition < 50)
       setCurrentPos(lastPosition)
-      console.log("currentPos " + currentPos, "lastPosition " + lastPosition)
     }
     window.addEventListener("scroll", handleScroll)
     return () => {
@@ -74,11 +73,11 @@ const Navbar = () => {
                   <span className={NavStyle.link}>Om oss</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/senastenytt" title="Senaste nytt">
                   <span className={NavStyle.link}>Senaste Nytt</span>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/blog" title="Blogg">
                   <span className={NavStyle.link}>Blogg</span>

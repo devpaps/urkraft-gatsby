@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { FiArrowRight } from "react-icons/fi"
 import { FiEdit3 } from "react-icons/fi"
 import { IoMdPricetag } from "react-icons/io"
+import { Link } from "gatsby"
 
 import HomeStyle from "../components/modules/home.module.css"
 
@@ -126,15 +127,19 @@ export default () => (
               <h1>Bli medlem hos oss</h1>
               <p>
                 Blev inte beachformen som du hade tänkt dig? Ingen fara, lös ett
-                träningskort på Urkraft för 300:- så rockar du på stranden nästa
-                år.
+                träningskort på Urkraft för 300:- genom att swischa till nummer
+                <strong> 1236178594</strong>, så rockar du på stranden nästa år.
               </p>
-              <input
-                type="email"
-                name="email"
-                placeholder="Ange er e-mail här"
-              />
-              <button className={HomeStyle.buttonMember}>Bli medlem</button>
+              <p>
+                För att få koden hör av dig till Katarina så kollar hon att
+                betalningen är genomförd och ni får koden. Mer information och
+                Katarinas nummer hittar ni
+                <Link to="/omoss">
+                  <button className={HomeStyle.buttonMember}>
+                    Mer information
+                  </button>
+                </Link>
+              </p>
             </div>
           </div>
         </div>

@@ -49,7 +49,7 @@ const Omoss = () => (
           <p>
             Betala in medlems- samt träningsavgift på vårt bankgirokonto i
             <strong> Handelsbanken: 725-0558</strong> eller
-            <strong> swisha till 1236178594 </strong>
+            <strong> swisha till 1236178594. </strong>
             Nya medlemmar kontaktar Katarina Gahlin för att få aktuell kod till
             gymmet; 070-2216143
           </p>

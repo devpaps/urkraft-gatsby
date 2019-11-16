@@ -22,9 +22,9 @@ const Footer = () => {
             <Link to="/omoss" className={FooterStyle.link}>
               Om oss
             </Link>
-            <Link to="/senastenytt" className={FooterStyle.link}>
+            {/* <Link to="/senastenytt" className={FooterStyle.link}>
               Senaste nytt
-            </Link>
+            </Link> */}
             <Link to="/blog" className={FooterStyle.link}>
               Blogg
             </Link>
