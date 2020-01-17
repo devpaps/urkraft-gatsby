@@ -17,6 +17,7 @@ export default () => (
           netlify-honeypot="bot-field"
           data-netlify="true"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <div className={ContactStyle.contactForm}>
             <p className={ContactStyle.hidden}>
               <label>
