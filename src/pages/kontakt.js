@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import ContactStyle from "../components/modules/contact.module.css"
@@ -10,7 +9,8 @@ export default () => (
       <Helmet>
         <title>Urkraft Gym - Kontakta oss</title>
       </Helmet>
-      <section className={`innerContainer`}>
+      <section className={ContactStyle.container}>
+        <h1 className={ContactStyle.headerText}>Kontakta oss</h1>
         <form
           name="contact"
           method="POST"
@@ -26,15 +26,22 @@ export default () => (
             </p>
             <label className={ContactStyle.label}>
               <span className={ContactStyle.span}>Ditt namn</span>
-              <input type="text" name="name" className="" placeholder="Johan" />
+              <input
+                type="text"
+                name="Namn"
+                className=""
+                required
+                placeholder="Johan"
+              />
             </label>
             <label className={ContactStyle.label}>
               <span className={ContactStyle.span}>Email</span>
               <input
                 type="email"
-                name="email"
+                name="E-mail"
                 className=""
                 placeholder="namn@gmail.com"
+                required
               />
             </label>
             <label className={ContactStyle.label}>
@@ -42,11 +49,15 @@ export default () => (
               <textarea
                 type="text"
                 className=""
-                name="message"
+                name="Meddelande"
                 placeholder="Ditt meddelande"
+                required
+                rows="4"
               />
             </label>
-            <button type="submit">Skicka</button>
+            <button type="submit" className={ContactStyle.whatWeDoButton}>
+              Skicka
+            </button>
           </div>
         </form>
       </section>

@@ -84,7 +84,9 @@ export default () => (
                   <span>
                     <IoMdPricetag />
                     {edge.node.category.map(categories => (
-                      <p className={HomeStyle.tags}>{categories.title}</p>
+                      <p className={HomeStyle.tags} key={edge.node.id}>
+                        {categories.title}
+                      </p>
                     ))}
                   </span>
                   {

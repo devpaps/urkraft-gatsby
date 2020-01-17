@@ -11,6 +11,11 @@
   font-size: 225%;
 }
 
+.information {
+  line-height: 1.3;
+  width: 50vw;
+}
+
 .header {
   font-size: 5rem;
 }
@@ -25,4 +30,10 @@
 
 .medlem {
   padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .information {
+    width: 100%;
+  }
 }
