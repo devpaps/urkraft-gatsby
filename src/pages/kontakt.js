@@ -11,8 +11,18 @@ export default () => (
         <title>Urkraft Gym - Kontakta oss</title>
       </Helmet>
       <section className={`innerContainer`}>
-        <form>
+        <form
+          name="contact"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
           <div className={ContactStyle.contactForm}>
+            <p className={ContactStyle.hidden}>
+              <label>
+                Don’t fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
             <label className={ContactStyle.label}>
               <span className={ContactStyle.span}>Ditt namn</span>
               <input type="name" className="" placeholder="Johan" />

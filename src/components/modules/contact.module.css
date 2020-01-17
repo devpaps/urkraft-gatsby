@@ -3,6 +3,10 @@ form {
   margin: 5em auto;
 }
 
+.hidden {
+  display: none;
+}
+
 .label {
   display: block;
 }
