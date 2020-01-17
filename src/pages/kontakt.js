@@ -26,17 +26,23 @@ export default () => (
             </p>
             <label className={ContactStyle.label}>
               <span className={ContactStyle.span}>Ditt namn</span>
-              <input type="name" className="" placeholder="Johan" />
+              <input type="text" name="name" className="" placeholder="Johan" />
             </label>
             <label className={ContactStyle.label}>
               <span className={ContactStyle.span}>Email</span>
-              <input type="email" className="" placeholder="namn@gmail.com" />
+              <input
+                type="email"
+                name="email"
+                className=""
+                placeholder="namn@gmail.com"
+              />
             </label>
             <label className={ContactStyle.label}>
               <span className={ContactStyle.span}>Ditt namn</span>
               <textarea
                 type="text"
                 className=""
+                name="message"
                 placeholder="Ditt meddelande"
               />
             </label>
