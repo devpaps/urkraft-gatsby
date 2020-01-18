@@ -64,9 +64,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/omoss"
-                  activeStyle={{
-                    color: "#f80f00",
-                  }}
+                  activeClassName={NavStyle.active}
                   title="Om oss"
                 >
                   <span className={NavStyle.link}>Om oss</span>
@@ -80,9 +78,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/blog"
-                  activeStyle={{
-                    color: "#f80f00",
-                  }}
+                  activeClassName={NavStyle.active}
                   title="Blogg"
                 >
                   <span className={NavStyle.link}>Blogg</span>
@@ -91,9 +87,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/kontakt"
-                  activeStyle={{
-                    color: "#f80f00",
-                  }}
+                  activeClassName={NavStyle.active}
                   title="Kontakt"
                 >
                   <span className={NavStyle.link}>Kontakt</span>

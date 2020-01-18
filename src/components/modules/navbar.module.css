@@ -48,7 +48,22 @@ header ul li a:hover {
   }
 }
 
+@media (min-width: 600px) {
+  .active {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+}
+
 @media (max-width: 600px) {
+  ul li:nth-child(1n + 2) {
+    border-top: 1px solid #333;
+  }
+
+  .active {
+    color: red;
+  }
+
   .headerText {
     margin: 0 auto;
   }
