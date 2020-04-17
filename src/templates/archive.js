@@ -1,6 +1,5 @@
 import React from "react"
-import { Link, graphql, navigate } from "gatsby"
-import { window } from "browser-monads"
+import { graphql, navigate } from "gatsby"
 import Layout from "../components/Layout"
 import { IoMdPricetag } from "react-icons/io"
 
@@ -8,11 +7,8 @@ import ArchiveStyle from "../components/modules/archive.module.css"
 
 const Archive = props => {
   const blogContent = props.data.allContentfulBlog
-  const { currentPage, numPages } = props.pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? "/blog/" : `/blog/${currentPage - 1}`
-  const nextPage = `/blog/${currentPage + 1}`
+
+
 
   return (
     <Layout>

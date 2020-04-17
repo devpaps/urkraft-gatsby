@@ -82,7 +82,7 @@ header ul li a:hover {
     height: 1px;
     background: #fff;
     position: relative;
-    top: 28px;
+    top: 29px;
     margin: 0 auto;
   }
 
@@ -90,3 +90,6 @@ header ul li a:hover {
     display: none;
   }
 }
+
+
+

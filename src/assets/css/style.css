@@ -36,18 +36,38 @@ header ul {
 header ul li {
   list-style: none;
   will-change: transform;
+  background: red;
 }
 
-header ul li:nth-child(1n + 2) {
-  margin-left: 2em;
+@media (max-width:600px) {
+  header ul li:nth-child(1) {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    animation: slideIn 0.15s backwards;
+  }
+  
+  header ul li:nth-child(3) {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    animation: slideIn 0.15s backwards;
+  }
+
+  header ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+}
+
+header ul li:nth-child(-n+2) {
+  margin-right: 20px;
 }
 
 header ul li a {
   color: #fff;
   text-transform: uppercase;
-  position: relative;
-  transition: color 0.3s ease;
 }
+
+
 
 header ul li a:hover {
   text-decoration: none;
@@ -89,6 +109,7 @@ header ul li a:hover::after {
     top: 140px;
     right: 5%;
     will-change: auto;
+    filter: drop-shadow(2px 4px 6px black);
   }
 
   .cd-stretchy-nav .stretchy-nav-bg {
@@ -120,9 +141,9 @@ header ul li a:hover::after {
     z-index: 2;
     visibility: hidden;
     padding: 60px 0 0;
-    text-align: right;
-    -webkit-transition: visibility 0.3s;
-    transition: visibility 0.3s;
+    /* text-align: right; */
+    /* -webkit-transition: visibility 0.3s; */
+    /* transition: visibility 0.3s; */
   }
 
   header ul li a {
