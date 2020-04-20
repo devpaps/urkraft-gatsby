@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
+//const facebookPageID = '879080106';
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -62,8 +62,36 @@ module.exports = {
         spaceId: `xjvps6qvbbfd`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        downloadLocal: true,
+        downloadLocal: false,
+      },
+    },
+    /* {
+      resolve: `gatsby-source-facebook`,
+      options: {
+        places: [`879080106`], // Can be either a numeric ID or the URL ID
+        params: {
+          fields: 'posts { message, created_time }', // See Facebooks API to see what you can query for
+        },
+        key: process.env.FACEBOOK_GRAPH_TOKEN, // You will need to create a Facebook application and go through review in order to get an API token.
+        version: '6.0', // The version of the graph API to use. Defaults to 5.0
+      },
+    }, */
+    {
+      resolve: `gatsby-source-facebook-graphql`,
+      options: {
+        // Facebook account or page ID
+        pageId: 879080106,
+        params: {
+          fields: [
+            'id',
+            'name',
+            'feed'
+          ],
+        },
+        // Access Token from facebook
+        accessToken: process.env.FACEBOOK_GRAPH_TOKEN,
       },
     },
   ],
 }
+

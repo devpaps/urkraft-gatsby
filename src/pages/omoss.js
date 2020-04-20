@@ -24,7 +24,7 @@ const Omoss = () => (
           styrkelyftsförbundet och Svenska bordtennisförbundet.
         </p>
         <div className={AboutStyle.medlemsavgifter}>
-          <h1>Medlemsavgifter 2019</h1>
+          <h1>Medlemsavgifter 2020</h1>
           <ul>
             <li>
               <strong>Enskild:</strong> 50 kr för alla åldrar
@@ -40,7 +40,7 @@ const Omoss = () => (
           <h3>Årskort</h3>
           <ul>
             <li>0 - 15år 0kr</li>
-            <li>15år - 300 kr</li>
+            <li>15år och äldre - 300 kr</li>
             <li>Enskilda träningstillfällen 20 kr/st </li>
           </ul>
         </div>
@@ -49,9 +49,9 @@ const Omoss = () => (
           <p>
             Betala in medlems- samt träningsavgift på vårt bankgirokonto i
             <strong> Handelsbanken: 725-0558</strong> eller
-            <strong> swisha till 1236178594. </strong>
+            <strong> swisha till 123 61 78 594. </strong>
             Nya medlemmar kontaktar Katarina Gahlin för att få aktuell kod till
-            gymmet; 070-2216143
+            gymmet; <a href="tel:0702216143">070-221 61 43</a>
           </p>
         </div>
         <h1 style={{ marginBottom: "1rem" }}>Styrelsen</h1>
@@ -59,16 +59,13 @@ const Omoss = () => (
           <strong>Ordförande:</strong> Tomas Jacobsson
         </p>
         <p>
-          <strong>Ledamöter:</strong> Alexander Jacobsson
+          <strong>Ledamöter:</strong> Sofie Blom, Robert Palmqvist
         </p>
         <p>
           <strong>Kassör:</strong> Katarina Gahlin
         </p>
         <p>
           <strong>Sekreterare:</strong> Pernilla Gunnarsdotter Persson
-        </p>
-        <p>
-          <strong>Suppleanter:</strong> Lars Jönsson
         </p>
       </div>
     </Layout>

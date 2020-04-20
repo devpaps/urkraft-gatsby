@@ -57,7 +57,7 @@ const Navbar = () => {
           <nav
             className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}
           >
-            <span onClick={open} className="cd-nav-trigger" href="#">
+            <span onClick={open} role="button" tabIndex="0" className="cd-nav-trigger" href="#">
               <span aria-hidden="true"></span>
             </span>
             <ul>

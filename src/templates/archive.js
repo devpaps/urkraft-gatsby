@@ -19,6 +19,7 @@ const Archive = props => {
             <div
               key={edge.node.id}
               className={ArchiveStyle.card}
+              role="article"
               style={{
                 backgroundImage: `linear-gradient(
                     to bottom,
@@ -29,10 +30,12 @@ const Archive = props => {
               }}
               onClick={() => navigate(`/blog/${edge.node.slug}`)}
             >
-              {edge.node.category.map(categories => (
-                <p className={ArchiveStyle.card__category}>
-                  <IoMdPricetag /> {categories.title}
-                </p>
+              {edge.node.category.map(categories => (                
+                <div key={categories.id}>
+                  <p className={ArchiveStyle.card__category}>
+                    <IoMdPricetag /> {categories.title}
+                  </p>
+                </div>
               ))}
               <p className={ArchiveStyle.card__title}>{edge.node.title}</p>
             </div>
