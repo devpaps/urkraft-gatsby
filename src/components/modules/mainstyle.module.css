@@ -66,18 +66,16 @@
   }
 
   .heroSubText {
+    width: 100%;
     left: 50%;
     top: 55%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 
-  .heroSubText {
-    width: 100%;
-  }
-
   .heroSubText p {
-    width: 100%;
+    width: 85%;
+    margin: auto;
   }
 }
 

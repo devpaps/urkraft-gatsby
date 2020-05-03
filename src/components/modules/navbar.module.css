@@ -61,7 +61,7 @@ header ul li a:hover {
   }
 
   .active {
-    color: red;
+    color: #000;
   }
 
   .headerText {

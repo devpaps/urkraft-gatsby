@@ -4,12 +4,18 @@
   display: grid;
   grid-template-columns: 1fr 555px;
   max-width: 1600px;
-  margin: 10em auto;
+  margin: 3rem auto 0;
   padding: 0 2em;
 }
 
+.header {
+  font-size: 3rem;
+}
+
 .showAllText {
-  transition: all 300ms;
+  display: flex;
+  align-items: center;
+  color: #000;
 }
 
 .showAllText:hover {
@@ -228,6 +234,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  .header {
+    font-size: 2rem;
+  }
+
   .homeText {
     display: block;
   }
@@ -262,5 +272,11 @@
   }
   .homeRightMemberBox {
     margin: 2em 0;
+  }
+
+  @media screen and (max-width: 430px) {
+    .header {
+      font-size: 1.5rem;
+    }
   }
 }
