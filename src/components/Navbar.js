@@ -62,6 +62,15 @@ const Navbar = () => {
             </span>
             <ul>
               <li>
+                <Link to="/" 
+                  title="Senaste nytt"
+                  className={NavStyle.mobileView} 
+                  activeClassName={NavStyle.active}
+                  >
+                  <span className={NavStyle.link}>Hem</span>
+                </Link>
+              </li>
+              <li>
                 <Link
                   to="/omoss"
                   activeClassName={NavStyle.active}
@@ -70,11 +79,6 @@ const Navbar = () => {
                   <span className={NavStyle.link}>Om oss</span>
                 </Link>
               </li>
-              {/* <li>
-                <Link to="/senastenytt" title="Senaste nytt">
-                  <span className={NavStyle.link}>Senaste Nytt</span>
-                </Link>
-              </li> */}
               <li>
                 <Link
                   to="/blog"

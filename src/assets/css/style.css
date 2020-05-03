@@ -46,7 +46,7 @@ header ul li {
     animation: slideIn 0.15s backwards;
   }
   
-  header ul li:nth-child(3) {
+  header ul li:nth-child(4) {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     animation: slideIn 0.15s backwards;
@@ -58,7 +58,7 @@ header ul li {
   }
 }
 
-header ul li:nth-child(-n+2) {
+header ul li:nth-child(-n+4) {
   margin-right: 20px;
 }
 
@@ -97,6 +97,10 @@ header ul li a:hover::after {
 @media (max-width: 600px) {
   header ul {
     display: block;
+  }
+
+  header ul li:nth-child(-n+4) {
+    margin-right: 0px;
   }
 
   header ul li a::after {
