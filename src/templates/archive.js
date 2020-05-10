@@ -8,8 +8,6 @@ import ArchiveStyle from "../components/modules/archive.module.css"
 const Archive = props => {
   const blogContent = props.data.allContentfulBlog
 
-
-
   return (
     <Layout>
       <section className={`innerContainer`}>

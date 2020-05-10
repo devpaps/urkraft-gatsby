@@ -92,7 +92,7 @@ const index = props => (
       <Featured />
     </section>
 
-    <section style={{ paddingBottom: "10em" }}>
+    <section>
       <Home />
     </section>
   </Layout>

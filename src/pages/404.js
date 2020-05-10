@@ -7,9 +7,15 @@ const PageNotFound = () => {
   return (
     <div className={Custom404.main}>
       <h1>Sida ej hittad</h1>
-      <p>Gå tillbaka till <Link to="/" title="Tillbaka till startsidan">startsidan</Link>.</p>
+      <p>
+        Gå tillbaka till{" "}
+        <Link to="/" title="Tillbaka till startsidan">
+          startsidan
+        </Link>
+        .
+      </p>
     </div>
   )
 }
 
-export default PageNotFound;
+export default PageNotFound
