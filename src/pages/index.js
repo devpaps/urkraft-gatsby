@@ -71,16 +71,13 @@ const index = props => (
           </div>
         </div>
         <div className={MainStyle.whatWeDoImageText}>
-          <h1>Flerfaldiga medaljörer</h1>
+          <h1>En aktiv klubb</h1>
           <p>
-            TDIK är medlem i Svenska volleybollförbundet Svenska
-            styrkelyftsförbundet och Svenska bordtennisförbundet. Volleyboll och
-            bordtennis spelas i skolans gympasal och beachvolleyboll spelas på
-            Invallningen i Tåsjö östra.
+          Gymmet, Urkraft gym, finns i källaren i Kyrktåsjö skola. Varje vecka kör vi Hiit-träning. Vi erbjuder även Zumba i samarbete med Madelene Östman. Under vintern arrangerar vi Korvloppet, ett skidlopp för alla 0–100 år. 
           </p>
-          <Link to="/omoss" className={MainStyle.whatWeDoButton}>
+          {/* <Link to="/omoss" className={MainStyle.whatWeDoButton}>
             Läs mer
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className={MainStyle.whatWeDoImage}>

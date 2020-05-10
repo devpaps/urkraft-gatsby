@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
+//const facebookPageID = '879080106';
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -44,7 +44,8 @@ module.exports = {
         background_color: "#E93F33",
         theme_color: "#E93F33",
         display: "minimal-ui",
-        icon: "src/assets/images/logo.png", // This path is relative to the root of the site.
+        icon: "src/assets/images/logo.png",
+        crossOrigin: `use-credentials`,
       },
     },
     "gatsby-plugin-offline",
@@ -67,3 +68,4 @@ module.exports = {
     },
   ],
 }
+

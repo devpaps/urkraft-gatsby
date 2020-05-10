@@ -1,3 +1,9 @@
+.container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 7em 2em;
+}
+
 .feed {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -40,3 +46,14 @@
   cursor: pointer;
   transform: scale(1.02);
 }
+
+.header {
+  padding-bottom: 3rem;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 500px) {
+ .header {
+   font-size: 2rem;
+ } 
+} 

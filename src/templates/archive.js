@@ -7,16 +7,20 @@ import ArchiveStyle from "../components/modules/archive.module.css"
 
 const Archive = props => {
   const blogContent = props.data.allContentfulBlog
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4121df53ff1d189750f437552f4d49777de803ea
   return (
     <Layout>
-      <section className={`innerContainer`}>
-        <h1>Alla inlägg</h1>
+      <section className={ArchiveStyle.container}>
+        <h1 className={ArchiveStyle.header}>Alla inlägg</h1>
         <div className={ArchiveStyle.feed}>
           {blogContent.edges.map(edge => (
             <div
               key={edge.node.id}
               className={ArchiveStyle.card}
+              role="article"
               style={{
                 backgroundImage: `linear-gradient(
                     to bottom,
@@ -27,10 +31,12 @@ const Archive = props => {
               }}
               onClick={() => navigate(`/blog/${edge.node.slug}`)}
             >
-              {edge.node.category.map(categories => (
-                <p className={ArchiveStyle.card__category}>
-                  <IoMdPricetag /> {categories.title}
-                </p>
+              {edge.node.category.map(categories => (                
+                <div key={categories.id}>
+                  <p className={ArchiveStyle.card__category}>
+                    <IoMdPricetag /> {categories.title}
+                  </p>
+                </div>
               ))}
               <p className={ArchiveStyle.card__title}>{edge.node.title}</p>
             </div>

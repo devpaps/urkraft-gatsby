@@ -57,13 +57,13 @@ export default () => (
       <div className={HomeStyle.home}>
         <div className={HomeStyle.homeLeft}>
           <div className={HomeStyle.homeText}>
-            <h1>Senaste Nyheterna</h1>
-            <p
-              className={HomeStyle.showAllText}
-              onClick={() => navigate(`./blog/`)}
-            >
-              Visa alla <span>></span>
-            </p>
+            <h1 className={HomeStyle.header}>Senaste Nyheterna</h1>
+            <div className={HomeStyle.showAllText}>
+              <Link
+                to="/blog"
+                title="Visa alla inlägg"
+                >Visa alla</Link>
+            </div>
           </div>
           <div className={HomeStyle.homeLeftCards}>
             {data.HomeQuery.edges.map(edge => (

@@ -1,10 +1,18 @@
 .main {
-  position: relative;
-  top: 65px;
   width: 80%;
-  padding: 5rem 0;
+  padding: 4rem 0;
   line-height: 1.7;
   margin: auto;
+}
+
+.hero {
+  max-width: 100%;
+  padding-top: 3rem;
+}
+
+.headerImage {
+  filter: brightness(0.5);
+  height: 75vh;
 }
 
 .information::first-letter {
@@ -36,10 +44,23 @@
   .information {
     width: 100%;
   }
+
+  .header {
+    font-size: 3rem;
+  }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 375px) {
   .header {
     font-size: 3rem;
   }
 }
+=======
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 2rem;
+  }
+}
+
+>>>>>>> 4121df53ff1d189750f437552f4d49777de803ea

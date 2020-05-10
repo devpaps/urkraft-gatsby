@@ -57,10 +57,19 @@ const Navbar = () => {
           <nav
             className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}
           >
-            <span onClick={open} className="cd-nav-trigger" href="#">
+            <span onClick={open} role="button" tabIndex="0" className="cd-nav-trigger" href="#">
               <span aria-hidden="true"></span>
             </span>
             <ul>
+              <li>
+                <Link to="/" 
+                  title="Senaste nytt"
+                  className={NavStyle.mobileView} 
+                  activeClassName={NavStyle.active}
+                  >
+                  <span className={NavStyle.link}>Hem</span>
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/omoss"
@@ -70,11 +79,6 @@ const Navbar = () => {
                   <span className={NavStyle.link}>Om oss</span>
                 </Link>
               </li>
-              {/* <li>
-                <Link to="/senastenytt" title="Senaste nytt">
-                  <span className={NavStyle.link}>Senaste Nytt</span>
-                </Link>
-              </li> */}
               <li>
                 <Link
                   to="/blog"

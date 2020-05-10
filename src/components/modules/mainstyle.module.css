@@ -66,18 +66,16 @@
   }
 
   .heroSubText {
+    width: 100%;
     left: 50%;
     top: 55%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 
-  .heroSubText {
-    width: 100%;
-  }
-
   .heroSubText p {
-    width: 100%;
+    width: 85%;
+    margin: auto;
   }
 }
 
@@ -190,16 +188,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5em;
-}
-
-.whatWeDoIconsBoxes:nth-child(n + 2) {
-  margin-left: 2em;
+  justify-content: space-around;
   text-align: center;
-}
-
-.whatWeDoIconsBoxes div:nth-child(n + 2) {
-  margin-top: 1em;
+  margin-top: 5em;
 }
 
 .whatWeDoImageText {
@@ -269,6 +260,12 @@
 
   .whatWeDoBox {
     padding: 100px 25px;
+  }
+}
+
+@media (max-width: 384px) {
+  .whatWeDoIcons {
+    flex-direction: column;
   }
 }
 
