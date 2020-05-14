@@ -15,10 +15,11 @@ const Omoss = props => (
         <title>Urkraft Gym - Om oss</title>
       </Helmet>
         <div className={AboutStyle.hero}>
+        <h1 className={AboutStyle.heroText}>Om oss</h1>
           <Img fluid={props.data.headerImage.childImageSharp.fluid} className={AboutStyle.headerImage}/>
         </div>
         <div className={AboutStyle.main}>
-        <h1 className={AboutStyle.header}>Om oss</h1>
+       {/*  <h1 className={AboutStyle.header}>Om oss</h1> */}
         <p className={AboutStyle.information}>
           Tåsjödalens Idrottsklubb, TDIK, bildades 1 oktober 2010. Inriktningen
           är styrketräning, volleyboll/beachvolleyboll och bordtennis. Gymmet,

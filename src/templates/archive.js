@@ -7,10 +7,6 @@ import ArchiveStyle from "../components/modules/archive.module.css"
 
 const Archive = props => {
   const blogContent = props.data.allContentfulBlog
-<<<<<<< HEAD
-
-=======
->>>>>>> 4121df53ff1d189750f437552f4d49777de803ea
   return (
     <Layout>
       <section className={ArchiveStyle.container}>
@@ -47,7 +43,7 @@ const Archive = props => {
   )
 }
 
-export default Archive
+
 
 export const pageQuery = graphql`
   query ArchiveQuery($skip: Int!, $limit: Int!) {
@@ -78,3 +74,4 @@ export const pageQuery = graphql`
     }
   }
 `
+export default Archive

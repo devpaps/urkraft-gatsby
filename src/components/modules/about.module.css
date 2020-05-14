@@ -8,6 +8,17 @@
 .hero {
   max-width: 100%;
   padding-top: 3rem;
+  position: relative;
+}
+
+.heroText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  font-size: 5rem;
 }
 
 .headerImage {
@@ -50,17 +61,20 @@
   }
 }
 
-<<<<<<< HEAD
+@media screen and (max-width: 600px) {
+  .heroText {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .heroText {
+    font-size: 2rem;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .header {
     font-size: 3rem;
   }
 }
-=======
-@media screen and (max-width: 500px) {
-  .header {
-    font-size: 2rem;
-  }
-}
-
->>>>>>> 4121df53ff1d189750f437552f4d49777de803ea
