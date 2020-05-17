@@ -66,6 +66,13 @@ module.exports = {
         downloadLocal: true,
       },
     },
+    {
+      resolve: `gatsby-source-googlemaps-static`,
+      options: {
+          key: `AIzaSyCYbCE5qGctjE_ZI74kOzFzXJhL9sAReIk`,
+          center: `64°13'30.8"N, 15°54'04.9"E`,
+      },
+  },
   ],
 }
 

@@ -38,12 +38,14 @@ input {
   outline: none;
   display: block;
   border: 1px solid #d9d9d9;
+  border-radius: var(--input-border);
   margin: 0 0 20px;
   padding: 10px 15px;
 }
 
 textarea {
   border: 1px solid #d9d9d9;
+  border-radius: var(--input-border);
   padding: 10px 15px;
 }
 

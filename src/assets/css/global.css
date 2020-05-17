@@ -1,3 +1,7 @@
+:root {
+  --input-border: 3px;
+}
+
 html,
 body {
   font-family: Rubik;

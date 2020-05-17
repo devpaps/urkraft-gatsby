@@ -2,8 +2,10 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import ContactStyle from "../components/modules/contact.module.css"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-export default () => (
+export default ({data}) => (
   <div>
     <Layout>
       <Helmet>
@@ -45,12 +47,12 @@ export default () => (
               />
             </label>
             <label className={ContactStyle.label}>
-              <span className={ContactStyle.span}>Ditt namn</span>
+              <span className={ContactStyle.span}>Ditt meddelande</span>
               <textarea
                 type="text"
                 className=""
                 name="Meddelande"
-                placeholder="Ditt meddelande"
+                placeholder="Vad har du på hjärtat?"
                 required
                 rows="4"
               />
@@ -60,7 +62,27 @@ export default () => (
             </button>
           </div>
         </form>
+        {/* <Img fluid={data.staticMap.childFile.absolutePath} /> */}
+        {data.staticMap.childFile.absolutePath}
       </section>
     </Layout>
   </div>
 )
+
+
+
+export const mapQuery = graphql`
+query StaticMapQuery {
+  staticMap {
+    childFile {
+      absolutePath
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+}
+
+`
