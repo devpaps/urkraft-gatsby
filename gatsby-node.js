@@ -111,25 +111,5 @@ exports.createPages = ({ actions, graphql }) => {
     })
   })
 
-/*   const getFacebook = makeRequest(
-    graphql,
-    `
-      {
-        allFacebook {
-          edges {
-            node {
-              id,
-              name,
-              posts
-              {
-                picture,permalink_url,message
-              }
-            }
-          }
-        }
-      }
-    `
-  ) */
-
   return Promise.all([getBlog, getArchive, getCompetitions])
 }

@@ -5,6 +5,8 @@ import NavStyle from "../components/modules/navbar.module.css"
 
 import "../assets/css/style.css"
 
+import Logga from "../assets/images/svg/logga.svg"
+
 const header = {
   display: "flex",
   alignItems: "center",
@@ -47,13 +49,16 @@ const Navbar = () => {
       }
     >
       <header>
-        <div style={header}>
-          <Link to="/" className={NavStyle.headerText}>
-            <h1 className={NavStyle.headerNavText}>
-              Urkraft <span style={{ fontWeight: "300" }}>Gym</span>
-              <span> |</span> <span>Svettas eller gå hem!</span>
-            </h1>
-          </Link>
+        <div className={NavStyle.header}>
+          <div className={NavStyle.headerNavLeft}>
+            <Link to="/" className={NavStyle.headerText}>
+              <Logga className={NavStyle.headerNavLogo} />
+            </Link>
+              <h1 className={NavStyle.headerNavText}>
+                Urkraft <span>Gym</span>
+                <span> |</span> <span>Svettas eller gå hem!</span>
+              </h1>
+          </div>
           <nav
             className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}
           >

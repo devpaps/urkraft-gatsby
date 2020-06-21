@@ -84,7 +84,7 @@ export const fluidHeaderImage = graphql`
 fragment fluidHeaderImage on File {
   childImageSharp {
     fluid(maxWidth: 1600) {
-      ...GatsbyImageSharpFluid
+      ...GatsbyImageSharpFluid_withWebp
       tracedSVG
     }
   }

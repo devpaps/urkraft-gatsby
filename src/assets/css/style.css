@@ -10,12 +10,14 @@
   transform: translateY(-65px);
 }
 
+
 header ul {
   padding: 0;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: max-content;
 }
 
 .cd-stretchy-nav.nav-is-visible ul li:nth-of-type(2) span {
@@ -58,7 +60,7 @@ header ul li {
   }
 }
 
-header ul li:nth-child(-n+4) {
+header ul li:nth-child(-1n+3) {
   margin-right: 20px;
 }
 

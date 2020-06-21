@@ -5,14 +5,55 @@
   padding-top: 6em;
 }
 
+.main {
+  margin-top: 10em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(323px,1fr));
+}
+
 .headerText {
   font-size: 4rem;
   text-align: center;
+  margin-top: 1em;
+}
+
+.left {
+  border-right: 1px solid grey;
+  padding-right: 3em;
+}
+
+.right {
+  padding-left: 3em;
+}
+
+.contactForm {
+  width: 100%;
+}
+
+.left h1 {
+  font-size: 3em;
+}
+
+.leftText {
+  margin-top: 1em;
+}
+
+.corona {
+  border: red dashed;
+  padding: 1em;
+  margin-top: 3em;
 }
 
 form {
-  width: 300px;
   margin: 5em auto;
+}
+
+.firstName {
+  flex: 1 0;
+}
+
+.lastName {
+  flex: 1 0;
 }
 
 .hidden {
@@ -20,12 +61,10 @@ form {
 }
 
 .label {
-  display: block;
+  color: #4a5568;
+  font-weight: bold;
 }
 
-.span {
-  color: #4a5568;
-}
 
 input,
 textarea {
@@ -34,26 +73,34 @@ textarea {
   display: block;
 }
 
+.nameContainer {
+  display: flex;
+}
+
 input {
   outline: none;
   display: block;
-  border: 1px solid #d9d9d9;
+  border: 2px solid #d9d9d9;
   border-radius: var(--input-border);
   margin: 0 0 20px;
   padding: 10px 15px;
 }
 
+input:focus, textarea:focus {
+  border: 2px solid #0d6ed5;
+}
+
 textarea {
-  border: 1px solid #d9d9d9;
+  border: 2px solid #d9d9d9;
   border-radius: var(--input-border);
   padding: 10px 15px;
 }
 
 .whatWeDoButton {
   display: inline-block;
-  background: #f80f00;
+  background: #f83e31;
   border: 0.1em solid rgb(248, 15, 0);
-  padding: 0.35em 1.2em;
+  padding: 0.35em 3.2em;
   margin: 1em 0.3em 0.3em 0;
   border-radius: 0.12em;
   text-decoration: none;
@@ -61,19 +108,49 @@ textarea {
   color: #fff;
   text-align: center;
   transition: all 0.2s;
+  font-weight: bolder;
 }
 
 .whatWeDoButton:hover {
-  color: #000;
   background: #f80f00;
-  border: 0.1em solid #000;
   text-decoration: none;
-  box-shadow: 5px 6px 20px rgba(248, 15, 0, 25%);
+}
+
+.whatWeDoButton div {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  text-transform: uppercase;
 }
 
 @media (max-width: 500px) {
   .headerText {
     padding-top: 1em;
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nameContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 717px) {
+  .left {
+    border-right: none;
+    padding-right: 0
+  }
+
+  .right {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .left h1 {
+    font-size: 2.5em;
+  }
+
+  .leftText h2 {
+    font-size: larger;
   }
 }

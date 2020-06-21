@@ -1,9 +1,6 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-//const facebookPageID = '879080106';
+const autoprefixer = require("autoprefixer");
+const browserslist = require('browserslist');
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -67,12 +64,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-googlemaps-static`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-          key: `AIzaSyCYbCE5qGctjE_ZI74kOzFzXJhL9sAReIk`,
-          center: `64°13'30.8"N, 15°54'04.9"E`,
+        postCssPlugins: [
+          autoprefixer({
+            grid: true,
+          })
+        ],
       },
-  },
+  }
   ],
 }
 

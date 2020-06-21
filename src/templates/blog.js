@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import Img from "gatsby-image"
 
 import blogStyle from "../components/modules/blog.module.css"
 
@@ -11,20 +12,14 @@ const BlogTemplate = props => {
       <Helmet>
         <title>Urkraft Gym - Blogg</title>
       </Helmet>
-      <div className={`innerContainerBlog`}>
+      <div >
         <div
           key={props.data.contentfulBlog.id}
-          className={` ${blogStyle.hero}`}
-          style={{
-            backgroundImage: `linear-gradient(
-                    to bottom,
-                    rgba(10,10,10,0) 0%,
-                    rgba(10,10,10,0) 50%,
-                    rgba(10,10,10,0.7) 100%),
-                    url(${props.data.contentfulBlog.featuredImage.fluid.src})`,
-          }}
-        ></div>
-        <div className="header">
+          className={blogStyle.hero}
+        >
+          <Img fluid={props.data.contentfulBlog.featuredImage.fluid} className={blogStyle.heroImage}/>
+        </div>
+        <div className={blogStyle.wrapper}>
           <div className={blogStyle.blogWrapper}>
             <h1 className={blogStyle.header}>{props.data.contentfulBlog.title}</h1>
             <div
@@ -56,13 +51,13 @@ export const query = graphql`
       seoAuthor
       seoKeywords
       seoImage {
-        fluid(maxWidth: 1200) {
+        fluid(maxWidth: 1200, quality: 80) {
           ...GatsbyContentfulFluid
           src
         }
       }
       featuredImage {
-        fluid(maxWidth: 1200) {
+        fluid(maxWidth: 1200, quality: 80) {
           ...GatsbyContentfulFluid
           src
         }
