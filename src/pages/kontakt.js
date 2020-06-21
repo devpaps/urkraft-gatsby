@@ -51,46 +51,18 @@ export default () => (
                 </p>
                 <div className={ContactStyle.nameContainer}>
                   <div className={ContactStyle.firstName}>
-<<<<<<< HEAD
                     <label className={ContactStyle.label} for="namn">
                       Ditt namn
-=======
-                    <label className={ContactStyle.label} for="fornamn">
-                      Förnamn
->>>>>>> 2b683c11abe26bd3bdec0f3a13516c38482e726c
                     </label>
                     <input
                       type="text"
                       maxlength="255"
                       autocomplete="none"
-<<<<<<< HEAD
                       autoFocus="true"
                       id="namn"
                       name="Namn"
                       className=""
                       required
-=======
-                      id="fornamn"
-                      name="Namn"
-                      className=""
-                      required
-                      placeholder="Förnamn"
-                    />
-                  </div>
-                  <div className={ContactStyle.lastName}>
-                    <label className={ContactStyle.label} for="efternamn">
-                      Efternamn
-                    </label>
-                    <input
-                      type="text"
-                      maxlength="255"
-                      autocomplete="none"
-                      id="efternamn"
-                      name="Namn"
-                      className=""
-                      required
-                      placeholder="Efternamn"
->>>>>>> 2b683c11abe26bd3bdec0f3a13516c38482e726c
                     />
                   </div>
                 </div>
@@ -104,10 +76,6 @@ export default () => (
                   id="email"
                   name="E-post"
                   className=""
-<<<<<<< HEAD
-=======
-                  placeholder="E-post"
->>>>>>> 2b683c11abe26bd3bdec0f3a13516c38482e726c
                   required
                 />
 
@@ -119,10 +87,6 @@ export default () => (
                   id="meddelande"
                   className=""
                   name="Meddelande"
-<<<<<<< HEAD
-=======
-                  placeholder="Vad har du på hjärtat?"
->>>>>>> 2b683c11abe26bd3bdec0f3a13516c38482e726c
                   required
                   rows="5"
                 />
@@ -137,23 +101,4 @@ export default () => (
       </section>
     </Layout>
   </div>
-<<<<<<< HEAD
 )
-=======
-)
-
-export const mapQuery = graphql`
-  query StaticMapQuery {
-    staticMap {
-      childFile {
-        absolutePath
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  }
-`
->>>>>>> 2b683c11abe26bd3bdec0f3a13516c38482e726c
