@@ -24,7 +24,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      let lastPosition = window.pageYOffset
+      let lastPosition = window.scrollY
 
       setVisible(currentPos > lastPosition || lastPosition < 50)
       setCurrentPos(lastPosition)
@@ -53,25 +53,32 @@ const Navbar = () => {
           <div className={NavStyle.headerNavLeft}>
             <Link to="/" className={NavStyle.headerText}>
               <Logga className={NavStyle.headerNavLogo} />
-            </Link>
               <h1 className={NavStyle.headerNavText}>
                 Urkraft <span>Gym</span>
-                <span> |</span> <span>Svettas eller gå hem!</span>
+                <span>&nbsp;|&nbsp;</span> <span>Svettas eller gå hem!</span>
               </h1>
+            </Link>
           </div>
           <nav
             className={`cd-stretchy-nav ${openMenu ? "nav-is-visible" : ""}`}
           >
-            <span onClick={open} role="button" tabIndex="0" className="cd-nav-trigger" href="#">
+            <span
+              onClick={open}
+              role="button"
+              tabIndex="0"
+              className="cd-nav-trigger"
+              href="#"
+            >
               <span aria-hidden="true"></span>
             </span>
             <ul>
               <li>
-                <Link to="/" 
+                <Link
+                  to="/"
                   title="Senaste nytt"
-                  className={NavStyle.mobileView} 
+                  className={NavStyle.mobileView}
                   activeClassName={NavStyle.active}
-                  >
+                >
                   <span className={NavStyle.link}>Hem</span>
                 </Link>
               </li>

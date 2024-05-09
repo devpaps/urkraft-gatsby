@@ -1,8 +1,10 @@
-const autoprefixer = require("autoprefixer");
-const browserslist = require('browserslist');
+const autoprefixer = require("autoprefixer")
+
+const environment =
+  process.env.NODE_ENV === "production" ? "development" : process.env.NODE_ENV
 
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.${environment}`,
 })
 
 module.exports = {
@@ -12,14 +14,10 @@ module.exports = {
   plugins: [
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Rubik`,
-            variants: [`300`, `400`, `700`],
-          },
-        ],
+        fonts: [`Rubik:300,400,700`],
+        display: "swap",
       },
     },
     {
@@ -57,8 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: 'xjvps6qvbbfd',
-        // Learn about environment variables: https://gatsby.dev/env-vars
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         downloadLocal: true,
       },
@@ -69,10 +66,9 @@ module.exports = {
         postCssPlugins: [
           autoprefixer({
             grid: true,
-          })
+          }),
         ],
       },
-  }
+    },
   ],
 }
-

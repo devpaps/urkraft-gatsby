@@ -59,10 +59,9 @@ export default () => (
           <div className={HomeStyle.homeText}>
             <h1 className={HomeStyle.header}>Senaste Nyheterna</h1>
             <div className={HomeStyle.showAllText}>
-              <Link
-                to="/blog"
-                title="Visa alla inlägg"
-                >Visa alla</Link>
+              <Link to="/blog" title="Visa alla inlägg">
+                Visa alla
+              </Link>
             </div>
           </div>
           <div className={HomeStyle.homeLeftCards}>
